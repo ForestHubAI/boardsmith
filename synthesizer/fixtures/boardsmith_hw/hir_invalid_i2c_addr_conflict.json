@@ -1,0 +1,66 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "ESP32_WROOM_32",
+      "name": "ESP32 Wi-Fi+BT Module",
+      "role": "mcu",
+      "manufacturer": "Espressif",
+      "mpn": "ESP32-WROOM-32",
+      "interface_types": ["I2C", "SPI"],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "id": "BME280",
+      "name": "BME280 Sensor",
+      "role": "sensor",
+      "manufacturer": "Bosch",
+      "mpn": "BME280",
+      "interface_types": ["I2C"],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "id": "BME280_2",
+      "name": "BME280 Sensor (second)",
+      "role": "sensor",
+      "manufacturer": "Bosch",
+      "mpn": "BME280",
+      "interface_types": ["I2C"],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "nets": [],
+  "buses": [],
+  "bus_contracts": [
+    {
+      "bus_name": "i2c0",
+      "bus_type": "I2C",
+      "master_id": "ESP32_WROOM_32",
+      "slave_ids": ["BME280", "BME280_2"],
+      "configured_clock_hz": 400000,
+      "pin_assignments": { "SDA": "21", "SCL": "22" },
+      "slave_addresses": {
+        "BME280": "0x76",
+        "BME280_2": "0x76"
+      },
+      "i2c": { "max_clock_hz": 400000, "address_bits": 7 }
+    }
+  ],
+  "electrical_specs": [],
+  "init_contracts": [],
+  "power_sequence": { "rails": [], "dependencies": [] },
+  "constraints": [],
+  "bom": [
+    { "line_id": "L001", "component_id": "ESP32_WROOM_32", "mpn": "ESP32-WROOM-32", "qty": 1 },
+    { "line_id": "L002", "component_id": "BME280", "mpn": "BME280", "qty": 1 },
+    { "line_id": "L003", "component_id": "BME280_2", "mpn": "BME280", "qty": 1 }
+  ],
+  "metadata": {
+    "created_at": "2026-02-18T00:00:00+00:00",
+    "track": "B",
+    "confidence": { "overall": 0.5, "explanations": ["Address conflict introduced for testing"] },
+    "assumptions": ["Two BME280 sensors assigned same address 0x76 — conflict expected"],
+    "session_id": "fixture-conflict-001"
+  }
+}

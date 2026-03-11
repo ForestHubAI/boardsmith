@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "boardsmith-fw"
+version = "0.5.0"
+description = "Hardware-aware firmware compiler: Eagle/KiCad schematics → ESP32/STM32/RP2040 firmware"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.10"
+keywords = ["firmware", "schematic", "esp32", "stm32", "rp2040", "eagle", "kicad", "code-generation", "embedded"]
+dependencies = [
+    "typer[all]>=0.12.0",
+    "lxml>=5.0.0",
+    "pdfplumber>=0.11.0",
+    "httpx>=0.27.0",
+    "openai>=1.30.0",
+    "pydantic>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+]
+
+[project.scripts]
+boardsmith-fw = "boardsmith_fw.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["boardsmith_fw"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true

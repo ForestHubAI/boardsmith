@@ -1,0 +1,155 @@
+{
+  "tool": "boardsmith-fw",
+  "version": "0.6.0",
+  "hir_version": "1.1.0",
+  "valid": true,
+  "summary": {
+    "total": 10,
+    "errors": 0,
+    "warnings": 1,
+    "info": 9,
+    "unknown": 1
+  },
+  "diagnostics": [
+    {
+      "id": "schema.validation.ok",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "HIR JSON schema validation passed",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "i2c_addr.i2c0.BME280.ok",
+      "category": "protocol",
+      "severity": "info",
+      "status": "pass",
+      "message": "I2C address 0x76 on bus 'i2c0' for 'BME280' is unique",
+      "affected_components": [
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "i2c_addr.i2c0.BME680.ok",
+      "category": "protocol",
+      "severity": "info",
+      "status": "pass",
+      "message": "I2C address 0x77 on bus 'i2c0' for 'BME680' is unique",
+      "affected_components": [
+        "BME680"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.ESP32_WROOM_32.BME280.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'ESP32_WROOM_32' \u2192 'BME280'",
+      "affected_components": [
+        "ESP32_WROOM_32",
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.ESP32_WROOM_32.BME680.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'ESP32_WROOM_32' \u2192 'BME680'",
+      "affected_components": [
+        "ESP32_WROOM_32",
+        "BME680"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.ESP32_WROOM_32.CONN_UART_4PIN.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'ESP32_WROOM_32' \u2192 'CONN_UART_4PIN'",
+      "affected_components": [
+        "ESP32_WROOM_32",
+        "CONN_UART_4PIN"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.BME280.ok",
+      "category": "knowledge",
+      "severity": "info",
+      "status": "pass",
+      "message": "Init contract present for 'BME280'",
+      "affected_components": [
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.BME680.ok",
+      "category": "knowledge",
+      "severity": "info",
+      "status": "pass",
+      "message": "Init contract present for 'BME680'",
+      "affected_components": [
+        "BME680"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.CONN_UART_4PIN.missing",
+      "category": "knowledge",
+      "severity": "warning",
+      "status": "unknown",
+      "message": "No init_contract found for peripheral 'CONN_UART_4PIN'",
+      "affected_components": [
+        "CONN_UART_4PIN"
+      ],
+      "suggested_fixes": [
+        "Add init_contract for this component in the HIR or knowledge DB"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "bom.complete",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "BOM covers all active components",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    }
+  ]
+}

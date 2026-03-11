@@ -1,0 +1,393 @@
+[
+  {
+    "line_id": "L001",
+    "component_id": "ESP32_WROOM_32",
+    "mpn": "ESP32-WROOM-32",
+    "manufacturer": "Espressif",
+    "description": "ESP32 Wi-Fi+BT Module",
+    "qty": 1.0,
+    "unit_cost_estimate": 3.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L002",
+    "component_id": "TP4056",
+    "mpn": "TP4056",
+    "manufacturer": "NanjingTopPower",
+    "description": "TP4056 1A LiPo Battery Charger",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L003",
+    "component_id": "BME280",
+    "mpn": "BME280",
+    "manufacturer": "Bosch Sensortec",
+    "description": "BME280 Pressure/Humidity/Temperature Sensor",
+    "qty": 1.0,
+    "unit_cost_estimate": 3.8,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L004",
+    "component_id": "USB_C_CONN",
+    "mpn": "USB-C-CONN",
+    "manufacturer": "Generic",
+    "description": "USB Type-C Receptacle Connector",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.6,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L005",
+    "component_id": "BSS138",
+    "mpn": "BSS138",
+    "manufacturer": "ON Semiconductor",
+    "description": "BSS138 N-Channel MOSFET Level Shifter",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P001",
+    "component_id": "R1",
+    "mpn": "RC0402FR-074K7L",
+    "manufacturer": null,
+    "description": "3.3k\u03a9 resistor \u2014 i2c pullup sda i2c0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P002",
+    "component_id": "R2",
+    "mpn": "RC0402FR-074K7L",
+    "manufacturer": null,
+    "description": "3.3k\u03a9 resistor \u2014 i2c pullup scl i2c0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P003",
+    "component_id": "C1",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd ESP32 WROOM 32",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P004",
+    "component_id": "C2",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd TP4056",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P005",
+    "component_id": "C3",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd BME280",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P006",
+    "component_id": "C4",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd USB C CONN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P007",
+    "component_id": "C5",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap VIN 3V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P008",
+    "component_id": "C6",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap 3V3 REG",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P009",
+    "component_id": "C7",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo input cap U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P010",
+    "component_id": "C8",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo output bulk U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P011",
+    "component_id": "C9",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 ldo output noise U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P012",
+    "component_id": "LS_R1",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup TP4056 3.3V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P013",
+    "component_id": "LS_R2",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup TP4056 5.0V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P014",
+    "component_id": "LS_R3",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 3.3V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P015",
+    "component_id": "LS_R4",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 5.0V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P016",
+    "component_id": "CC_R1",
+    "mpn": "RC0402FR-075K1L",
+    "manufacturer": null,
+    "description": "5.1k\u03a9 resistor \u2014 usbc cc1 pulldown",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P017",
+    "component_id": "CC_R2",
+    "mpn": "RC0402FR-075K1L",
+    "manufacturer": null,
+    "description": "5.1k\u03a9 resistor \u2014 usbc cc2 pulldown",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "V001",
+    "component_id": "U_LDO1",
+    "mpn": "AMS1117-3.3",
+    "manufacturer": "Advanced Monolithic Systems",
+    "description": "LDO Voltage Regulator VIN_3V\u21923V3_REG (4V\u21923.3V, 800mA max)",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.9,
+      "evidence": []
+    }
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "tool": "boardsmith-fw",
+  "version": "0.6.0",
+  "hir_version": "1.1.0",
+  "valid": true,
+  "summary": {
+    "total": 5,
+    "errors": 0,
+    "warnings": 0,
+    "info": 5,
+    "unknown": 0
+  },
+  "diagnostics": [
+    {
+      "id": "schema.validation.ok",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "HIR JSON schema validation passed",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "i2c_addr.i2c0.BME280.ok",
+      "category": "protocol",
+      "severity": "info",
+      "status": "pass",
+      "message": "I2C address 0x76 on bus 'i2c0' for 'BME280' is unique",
+      "affected_components": [
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.ESP32_WROOM_32.BME280.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'ESP32_WROOM_32' \u2192 'BME280'",
+      "affected_components": [
+        "ESP32_WROOM_32",
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.BME280.ok",
+      "category": "knowledge",
+      "severity": "info",
+      "status": "pass",
+      "message": "Init contract present for 'BME280'",
+      "affected_components": [
+        "BME280"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "bom.complete",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "BOM covers all active components",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    }
+  ]
+}

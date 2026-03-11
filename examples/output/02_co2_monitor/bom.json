@@ -1,0 +1,631 @@
+[
+  {
+    "line_id": "L001",
+    "component_id": "RP2040",
+    "mpn": "RP2040",
+    "manufacturer": "Raspberry Pi Ltd",
+    "description": "RP2040 Dual-Core ARM Cortex-M0+ MCU",
+    "qty": 1.0,
+    "unit_cost_estimate": 1.0,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L002",
+    "component_id": "SCD41",
+    "mpn": "SCD41",
+    "manufacturer": "Sensirion",
+    "description": "SCD41 CO2 + Temp + Humidity Sensor",
+    "qty": 1.0,
+    "unit_cost_estimate": 30.0,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L003",
+    "component_id": "SSD1306",
+    "mpn": "SSD1306",
+    "manufacturer": "Solomon Systech",
+    "description": "SSD1306 OLED Display Controller",
+    "qty": 1.0,
+    "unit_cost_estimate": 5.0,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L004",
+    "component_id": "BME680",
+    "mpn": "BME680",
+    "manufacturer": "Bosch Sensortec",
+    "description": "BME680 Environmental Sensor + VOC Gas",
+    "qty": 1.0,
+    "unit_cost_estimate": 4.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L005",
+    "component_id": "USB_C_CONN",
+    "mpn": "USB-C-CONN",
+    "manufacturer": "Generic",
+    "description": "USB Type-C Receptacle Connector",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.6,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L006",
+    "component_id": "W25Q16JVSSIQ",
+    "mpn": "W25Q16JVSSIQ",
+    "manufacturer": "Winbond",
+    "description": "W25Q16JVSSIQ 16Mbit QSPI NOR Boot Flash",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L007",
+    "component_id": "BSS138",
+    "mpn": "BSS138",
+    "manufacturer": "ON Semiconductor",
+    "description": "BSS138 N-Channel MOSFET Level Shifter",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L008",
+    "component_id": "CONN_SWD_2X5",
+    "mpn": "CONN-SWD-2x5",
+    "manufacturer": "Generic",
+    "description": "ARM SWD 2x5 1.27mm Debug Header",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P001",
+    "component_id": "R1",
+    "mpn": "RC0402FR-072K2L",
+    "manufacturer": null,
+    "description": "2.2k\u03a9 resistor \u2014 i2c pullup sda i2c0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P002",
+    "component_id": "R2",
+    "mpn": "RC0402FR-072K2L",
+    "manufacturer": null,
+    "description": "2.2k\u03a9 resistor \u2014 i2c pullup scl i2c0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P003",
+    "component_id": "C1",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd RP2040",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P004",
+    "component_id": "C2",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd SCD41",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P005",
+    "component_id": "C3",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd SSD1306",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P006",
+    "component_id": "C4",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd BME680",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P007",
+    "component_id": "C5",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd USB C CONN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P008",
+    "component_id": "C6",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap VIN 5V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P009",
+    "component_id": "C7",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap 3V3 REG",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P010",
+    "component_id": "C8",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo input cap U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P011",
+    "component_id": "C9",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo output bulk U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P012",
+    "component_id": "C10",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 ldo output noise U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P013",
+    "component_id": "BOOT_R1",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 reset pullup RUN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P014",
+    "component_id": "BOOT_C1",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 reset filter RUN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P015",
+    "component_id": "BOOT_R2",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 boot pullup QSPI SS",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P016",
+    "component_id": "CLK_Y1",
+    "mpn": "HC49-12MHZ",
+    "manufacturer": null,
+    "description": "12MHz crystal \u2014 main crystal 12mhz",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.25,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P017",
+    "component_id": "CLK_C1",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "20pF capacitor \u2014 crystal load cap XIN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P018",
+    "component_id": "CLK_C2",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "20pF capacitor \u2014 crystal load cap XOUT",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P019",
+    "component_id": "LS_R1",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 3.3V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P020",
+    "component_id": "LS_R2",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 5.0V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P021",
+    "component_id": "BP_R1",
+    "mpn": "RC0402FR-0733RL",
+    "manufacturer": null,
+    "description": "33\u03a9 resistor \u2014 spi sck series qspi boot",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P022",
+    "component_id": "BP_R2",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 spi cs pullup W25Q16JVSSIQ",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P023",
+    "component_id": "CC_R1",
+    "mpn": "RC0402FR-075K1L",
+    "manufacturer": null,
+    "description": "5.1k\u03a9 resistor \u2014 usbc cc1 pulldown",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P024",
+    "component_id": "CC_R2",
+    "mpn": "RC0402FR-075K1L",
+    "manufacturer": null,
+    "description": "5.1k\u03a9 resistor \u2014 usbc cc2 pulldown",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P025",
+    "component_id": "MC_C1",
+    "mpn": "",
+    "manufacturer": null,
+    "description": "10\u00b5FF cap \u2014 mcu mandatory Bulk decoupling for IO supply",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P026",
+    "component_id": "MC_C2",
+    "mpn": "",
+    "manufacturer": null,
+    "description": "1\u00b5FF cap \u2014 mcu mandatory On-chip regulator output decoupling (man",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P027",
+    "component_id": "MC_R1",
+    "mpn": "",
+    "manufacturer": null,
+    "description": "1k\u03a9\u03a9 resistor \u2014 mcu mandatory RP2040 HW Guide: 1k\u03a9 between XIN and GND",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P028",
+    "component_id": "MC_R2",
+    "mpn": "",
+    "manufacturer": null,
+    "description": "27\u03a9\u03a9 resistor \u2014 mcu mandatory USB D+/D- series resistors (2\u00d7 required)",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "V001",
+    "component_id": "U_LDO1",
+    "mpn": "AMS1117-3.3",
+    "manufacturer": "Advanced Monolithic Systems",
+    "description": "LDO Voltage Regulator VIN_5V\u21923V3_REG (5V\u21923.3V, 800mA max)",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.9,
+      "evidence": []
+    }
+  }
+]

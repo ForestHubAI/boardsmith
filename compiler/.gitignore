@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Project outputs
+.env
+.cache/
+output/
+component_knowledge/
+datasheets/
+hardware_graph.json
+analysis.md
+imported_data.json
+generated_firmware/
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp

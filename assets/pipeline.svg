@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 720" fill="none">
+  <style>
+    .stage-box { fill: none; stroke: #FF3D00; stroke-width: 1.5; rx: 6; }
+    .stage-label { font-family: 'Courier New', Courier, monospace; font-size: 14px; fill: #FF3D00; }
+    .stage-desc { font-family: 'Courier New', Courier, monospace; font-size: 12px; fill: #888888; }
+    .arrow { stroke: #555555; stroke-width: 1.5; }
+    .arrow-head { fill: #555555; }
+    .output-box { fill: none; stroke: #A7A284; stroke-width: 1.5; rx: 6; }
+    .output-label { font-family: 'Courier New', Courier, monospace; font-size: 12px; fill: #A7A284; }
+    .header { font-family: 'Courier New', Courier, monospace; font-size: 16px; fill: #FF3D00; font-weight: bold; }
+    .input-label { font-family: 'Courier New', Courier, monospace; font-size: 14px; fill: #CCCCCC; }
+    .badge { font-family: 'Courier New', Courier, monospace; font-size: 10px; fill: #FF3D00; }
+    .badge-bg { fill: none; stroke: #FF3D00; stroke-width: 1; rx: 8; }
+    @media (prefers-color-scheme: light) {
+      .stage-desc { fill: #666666; }
+      .input-label { fill: #333333; }
+    }
+  </style>
+
+  <!-- Input -->
+  <text x="350" y="30" text-anchor="middle" class="input-label">Text Prompt</text>
+  <line x1="350" y1="38" x2="350" y2="55" class="arrow"/>
+  <polygon points="344,55 350,63 356,55" class="arrow-head"/>
+
+  <!-- B1 -->
+  <rect x="120" y="68" width="460" height="38" class="stage-box"/>
+  <text x="145" y="92" class="stage-label">B1</text>
+  <text x="185" y="92" class="stage-desc">Intent parsing</text>
+
+  <line x1="350" y1="106" x2="350" y2="118" class="arrow"/>
+  <polygon points="344,118 350,126 356,118" class="arrow-head"/>
+
+  <!-- B2 -->
+  <rect x="120" y="128" width="460" height="38" class="stage-box"/>
+  <text x="145" y="152" class="stage-label">B2</text>
+  <text x="185" y="152" class="stage-desc">Requirements normalization</text>
+
+  <line x1="350" y1="166" x2="350" y2="178" class="arrow"/>
+  <polygon points="344,178 350,186 356,178" class="arrow-head"/>
+
+  <!-- B3 -->
+  <rect x="120" y="188" width="460" height="38" class="stage-box"/>
+  <text x="145" y="212" class="stage-label">B3</text>
+  <text x="185" y="212" class="stage-desc">Component selection (from knowledge DB)</text>
+
+  <line x1="350" y1="226" x2="350" y2="238" class="arrow"/>
+  <polygon points="344,238 350,246 356,238" class="arrow-head"/>
+
+  <!-- B4 -->
+  <rect x="120" y="248" width="460" height="38" class="stage-box"/>
+  <text x="145" y="272" class="stage-label">B4</text>
+  <text x="185" y="272" class="stage-desc">Topology synthesis (buses, pull-ups)</text>
+
+  <line x1="350" y1="286" x2="350" y2="298" class="arrow"/>
+  <polygon points="344,298 350,306 356,298" class="arrow-head"/>
+
+  <!-- B5 -->
+  <rect x="120" y="308" width="460" height="38" class="stage-box"/>
+  <text x="145" y="332" class="stage-label">B5</text>
+  <text x="185" y="332" class="stage-desc">HIR composition</text>
+
+  <line x1="350" y1="346" x2="350" y2="358" class="arrow"/>
+  <polygon points="344,358 350,366 356,358" class="arrow-head"/>
+
+  <!-- B6 — with badge -->
+  <rect x="120" y="368" width="460" height="38" class="stage-box"/>
+  <text x="145" y="392" class="stage-label">B6</text>
+  <text x="185" y="392" class="stage-desc">Constraint refinement</text>
+  <!-- 11 checks badge -->
+  <rect x="460" y="377" width="100" height="20" class="badge-bg"/>
+  <text x="510" y="391" text-anchor="middle" class="badge">11 checks</text>
+
+  <line x1="350" y1="406" x2="350" y2="418" class="arrow"/>
+  <polygon points="344,418 350,426 356,418" class="arrow-head"/>
+
+  <!-- B7 -->
+  <rect x="120" y="428" width="460" height="38" class="stage-box"/>
+  <text x="145" y="452" class="stage-label">B7</text>
+  <text x="185" y="452" class="stage-desc">BOM generation</text>
+
+  <line x1="350" y1="466" x2="350" y2="478" class="arrow"/>
+  <polygon points="344,478 350,486 356,478" class="arrow-head"/>
+
+  <!-- B8 -->
+  <rect x="120" y="488" width="460" height="38" class="stage-box"/>
+  <text x="145" y="512" class="stage-label">B8</text>
+  <text x="185" y="512" class="stage-desc">KiCad export</text>
+
+  <line x1="350" y1="526" x2="350" y2="538" class="arrow"/>
+  <polygon points="344,538 350,546 356,538" class="arrow-head"/>
+
+  <!-- B9 -->
+  <rect x="120" y="548" width="460" height="38" class="stage-box"/>
+  <text x="145" y="572" class="stage-label">B9</text>
+  <text x="185" y="572" class="stage-desc">Confidence scoring</text>
+
+  <!-- Arrow to outputs -->
+  <line x1="350" y1="586" x2="350" y2="610" class="arrow"/>
+  <polygon points="344,610 350,618 356,610" class="arrow-head"/>
+
+  <!-- Output boxes -->
+  <g transform="translate(0, 628)">
+    <rect x="30" y="0" width="145" height="38" class="output-box"/>
+    <text x="102" y="24" text-anchor="middle" class="output-label">.kicad_sch</text>
+
+    <rect x="195" y="0" width="120" height="38" class="output-box"/>
+    <text x="255" y="24" text-anchor="middle" class="output-label">bom.json</text>
+
+    <rect x="335" y="0" width="120" height="38" class="output-box"/>
+    <text x="395" y="24" text-anchor="middle" class="output-label">firmware/</text>
+
+    <rect x="475" y="0" width="120" height="38" class="output-box"/>
+    <text x="535" y="24" text-anchor="middle" class="output-label">gerber/</text>
+  </g>
+
+  <!-- Connecting lines to output boxes -->
+  <line x1="350" y1="618" x2="102" y2="628" class="arrow"/>
+  <line x1="350" y1="618" x2="255" y2="628" class="arrow"/>
+  <line x1="350" y1="618" x2="395" y2="628" class="arrow"/>
+  <line x1="350" y1="618" x2="535" y2="628" class="arrow"/>
+</svg>

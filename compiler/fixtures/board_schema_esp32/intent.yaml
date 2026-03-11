@@ -1,0 +1,36 @@
+boardsmith_fw_intent: "1.0"
+
+firmware:
+  name: weather_station
+
+  tasks:
+    - name: read_env
+      every: 5s
+      read:
+        - component: BME280
+          values: [temperature, pressure, humidity]
+          store_as: env
+
+    - name: read_interval_log
+      every: 60s
+      read:
+        - component: BME280
+          values: [temperature, pressure]
+          store_as: log_sample
+      actions:
+        - flash.append:
+            device: W25Q128JV
+            data: log_sample
+            format: binary
+
+    - name: display_env
+      trigger: read_env
+      actions:
+        - display.show:
+            device: SSD1306
+            text: "T={env.temperature:.1f}C H={env.humidity:.0f}%"
+
+    - name: serial_log
+      trigger: read_env
+      actions:
+        - "serial.print: T={env.temperature:.2f}C P={env.pressure:.1f}hPa H={env.humidity:.0f}%"

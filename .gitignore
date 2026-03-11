@@ -1,0 +1,65 @@
+# Claude Code local config (not for public repo)
+CLAUDE.md
+
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.venv*/
+venv/
+venv*/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.so
+build/
+output/
+!examples/output/
+!examples/output/**
+*.kicad_sch.bak
+
+# KiCad generated / cache files
+*.kicad_prl
+fp-info-cache
+schematic-backups/
+ERC.rpt
+
+# Test output directories
+test-fix/
+test-out/
+test-output/
+boardsmith-output/
+
+# Dev project artifacts
+*.rpt
+/tmp/
+
+# macOS
+.DS_Store
+
+# Knowledge DB (auto-generated from seed data)
+shared/knowledge/boardsmith.db
+shared/knowledge/boardsmith.db-shm
+shared/knowledge/boardsmith.db-wal
+
+.planning/
+
+# Internal planning/session docs (local only)
+DBroadmap.md
+CODEBASE_MAP.md
+ROADMAP.md
+docs/
+launch/
+test.md
+run_tests.sh
+RELEASE_CHECKLIST.md
+legal/commercial_license_agreement_v1.md
+compiler/ROADMAP.md
+compiler/VISION.md
+
+# Old project name DB (auto-generated, replaced by boardsmith.db)
+shared/knowledge/vibehard.db
+shared/knowledge/vibehard.db-shm
+shared/knowledge/vibehard.db-wal

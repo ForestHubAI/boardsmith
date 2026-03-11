@@ -1,0 +1,387 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://boardsmith-fw.dev/schemas/hir/v1.1.0/hir.schema.json",
+  "title": "Hardware Intermediate Representation",
+  "type": "object",
+  "required": [
+    "version",
+    "source",
+    "components",
+    "nets",
+    "bus_contracts",
+    "electrical_specs",
+    "init_contracts",
+    "power_sequence",
+    "constraints",
+    "metadata"
+  ],
+  "properties": {
+    "version": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
+    "source": { "type": "string", "description": "prompt|schematic|hybrid identifier" },
+
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "role", "mpn", "interface_types"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string", "enum": ["mcu", "sensor", "actuator", "memory", "power", "comms", "passive", "analog", "other"] },
+          "manufacturer": { "type": "string" },
+          "mpn": { "type": "string" },
+          "package": { "type": "string" },
+          "interface_types": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["I2C", "SPI", "UART", "GPIO", "ADC", "PWM", "CAN", "ANALOG_IN", "ANALOG_OUT", "OTHER"] }
+          },
+          "pins": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "number": { "type": "string" },
+                "function": { "type": "string" },
+                "electrical_type": { "type": "string" }
+              }
+            }
+          },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "nets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "pins"],
+        "properties": {
+          "name": { "type": "string" },
+          "pins": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["component_id", "pin_name"],
+              "properties": {
+                "component_id": { "type": "string" },
+                "pin_name": { "type": "string" }
+              }
+            }
+          },
+          "is_bus": { "type": "boolean", "default": false },
+          "is_power": { "type": "boolean", "default": false },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "buses": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "master_component_id", "slave_component_ids"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string", "enum": ["I2C", "SPI", "UART", "GPIO", "ADC", "PWM", "CAN", "OTHER"] },
+          "master_component_id": { "type": "string" },
+          "slave_component_ids": { "type": "array", "items": { "type": "string" } },
+          "pin_mapping": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["signal", "net"],
+              "properties": {
+                "signal": { "type": "string" },
+                "net": { "type": "string" },
+                "mcu_pin_name": { "type": "string" },
+                "gpio": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "bus_contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bus_name", "bus_type", "master_id", "slave_ids"],
+        "properties": {
+          "bus_name": { "type": "string" },
+          "bus_type": { "type": "string", "enum": ["I2C", "SPI", "UART", "CAN"] },
+          "master_id": { "type": "string" },
+          "slave_ids": { "type": "array", "items": { "type": "string" } },
+          "configured_clock_hz": { "type": "integer", "minimum": 0 },
+          "pin_assignments": {
+            "type": "object",
+            "additionalProperties": { "type": "string" },
+            "description": "signal->gpio"
+          },
+          "slave_addresses": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+            "description": "slave_id->i2c address"
+          },
+          "i2c": {
+            "type": "object",
+            "properties": {
+              "address": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+              "address_bits": { "type": "integer", "enum": [7, 10], "default": 7 },
+              "max_clock_hz": { "type": "integer", "minimum": 1000 },
+              "min_clock_hz": { "type": "integer", "minimum": 0 },
+              "t_rise_ns": { "type": "integer" },
+              "t_fall_ns": { "type": "integer" },
+              "t_su_dat_ns": { "type": "integer" },
+              "t_hd_dat_ns": { "type": "integer" },
+              "t_su_sta_ns": { "type": "integer" },
+              "t_buf_ns": { "type": "integer" },
+              "pullup_ohm_min": { "type": "integer", "minimum": 100 },
+              "pullup_ohm_max": { "type": "integer", "minimum": 100 },
+              "bus_capacitance_pf_max": { "type": "integer", "minimum": 10 }
+            }
+          },
+          "spi": {
+            "type": "object",
+            "properties": {
+              "max_clock_hz": { "type": "integer", "minimum": 1000 },
+              "mode": { "type": "integer", "enum": [0, 1, 2, 3] },
+              "bit_order": { "type": "string", "enum": ["MSB", "LSB"] },
+              "cs_active": { "type": "string", "enum": ["low", "high"] },
+              "cs_setup_ns": { "type": "integer" },
+              "cs_hold_ns": { "type": "integer" }
+            }
+          },
+          "uart": {
+            "type": "object",
+            "properties": {
+              "baud_rate": { "type": "integer", "minimum": 1200 },
+              "data_bits": { "type": "integer", "enum": [5, 6, 7, 8, 9] },
+              "stop_bits": { "type": "integer", "enum": [1, 2] },
+              "parity": { "type": "string", "enum": ["none", "even", "odd"] },
+              "flow_control": { "type": "string", "enum": ["none", "rts_cts", "xon_xoff"] }
+            }
+          },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "electrical_specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["component_id"],
+        "properties": {
+          "component_id": { "type": "string" },
+          "supply_voltage": { "$ref": "#/$defs/voltage" },
+          "io_voltage": { "$ref": "#/$defs/voltage" },
+          "logic_high_min": { "type": "number" },
+          "logic_low_max": { "type": "number" },
+          "current_draw": {
+            "type": "object",
+            "properties": {
+              "typical": { "type": "number" },
+              "max": { "type": "number" },
+              "unit": { "type": "string", "default": "mA" }
+            }
+          },
+          "is_5v_tolerant": { "type": "boolean" },
+          "drive_strength_ma": { "type": "number" },
+          "input_capacitance_pf": { "type": "number" },
+          "abs_max_voltage": { "type": "number" },
+          "temp_min_c": { "type": "number" },
+          "temp_max_c": { "type": "number" },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "init_contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["component_id", "phases"],
+        "properties": {
+          "component_id": { "type": "string" },
+          "component_name": { "type": "string" },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["phase", "order"],
+              "properties": {
+                "phase": { "type": "string", "enum": ["reset", "configure", "calibrate", "enable", "verify"] },
+                "order": { "type": "integer", "minimum": 0 },
+                "writes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["reg_addr", "value"],
+                    "properties": {
+                      "reg_addr": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+                      "value": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+                      "description": { "type": "string" },
+                      "purpose": { "type": "string" }
+                    }
+                  }
+                },
+                "reads": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["reg_addr"],
+                    "properties": {
+                      "reg_addr": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+                      "expected_value": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+                      "mask": { "type": "string", "pattern": "^0x[0-9a-fA-F]+$" },
+                      "description": { "type": "string" },
+                      "purpose": { "type": "string" }
+                    }
+                  }
+                },
+                "delay_after_ms": { "type": "integer", "minimum": 0 },
+                "precondition": { "type": "string" },
+                "postcondition": { "type": "string" },
+                "provenance": { "$ref": "#/$defs/provenance" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "power_sequence": {
+      "type": "object",
+      "required": ["rails", "dependencies"],
+      "properties": {
+        "rails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "voltage"],
+            "properties": {
+              "name": { "type": "string" },
+              "voltage": { "$ref": "#/$defs/voltage" },
+              "max_current_ma": { "type": "number" },
+              "enable_gpio": { "type": "string" },
+              "startup_delay_ms": { "type": "integer", "minimum": 0 },
+              "provenance": { "$ref": "#/$defs/provenance" }
+            }
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "target"],
+            "properties": {
+              "source": { "type": "string" },
+              "target": { "type": "string" },
+              "min_delay_ms": { "type": "integer", "minimum": 0 },
+              "description": { "type": "string" },
+              "provenance": { "$ref": "#/$defs/provenance" }
+            }
+          }
+        }
+      }
+    },
+
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "description", "severity", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "category": { "type": "string", "enum": ["electrical", "timing", "protocol", "power", "topology", "knowledge"] },
+          "description": { "type": "string" },
+          "severity": { "type": "string", "enum": ["error", "warning", "info"] },
+          "status": { "type": "string", "enum": ["pass", "fail", "unknown"] },
+          "details": { "type": "string" },
+          "affected_components": { "type": "array", "items": { "type": "string" } },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "bom": {
+      "type": "array",
+      "description": "Mandatory for Boardsmith outputs",
+      "items": {
+        "type": "object",
+        "required": ["line_id", "component_id", "mpn", "qty"],
+        "properties": {
+          "line_id": { "type": "string" },
+          "component_id": { "type": "string" },
+          "mpn": { "type": "string" },
+          "manufacturer": { "type": "string" },
+          "description": { "type": "string" },
+          "qty": { "type": "number", "minimum": 1 },
+          "unit_cost_estimate": { "type": "number" },
+          "currency": { "type": "string", "default": "USD" },
+          "availability": { "type": "string" },
+          "provenance": { "$ref": "#/$defs/provenance" }
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "track", "confidence"],
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "track": { "type": "string", "enum": ["A", "B"] },
+        "confidence": {
+          "type": "object",
+          "required": ["overall"],
+          "properties": {
+            "overall": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "subscores": {
+              "type": "object",
+              "properties": {
+                "intent": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+                "components": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+                "topology": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+                "electrical": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+              }
+            },
+            "explanations": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "assumptions": { "type": "array", "items": { "type": "string" } },
+        "session_id": { "type": "string" }
+      }
+    }
+  },
+
+  "$defs": {
+    "voltage": {
+      "type": "object",
+      "required": ["nominal"],
+      "properties": {
+        "nominal": { "type": "number" },
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "unit": { "type": "string", "default": "V" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_type", "confidence"],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["schematic", "prompt", "builtin_db", "cache", "datasheet", "user_input", "inference"]
+        },
+        "source_ref": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "evidence": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

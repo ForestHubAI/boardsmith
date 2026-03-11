@@ -1,0 +1,22 @@
+[
+  {
+    "line_id": "L001",
+    "component_id": "ESP32_WROOM_32",
+    "mpn": "ESP32-WROOM-32",
+    "manufacturer": "Espressif",
+    "description": "ESP32 Wi-Fi+BT Module",
+    "qty": 1,
+    "unit_cost_estimate": 3.50,
+    "currency": "USD"
+  },
+  {
+    "line_id": "L002",
+    "component_id": "BME280",
+    "mpn": "BME280",
+    "manufacturer": "Bosch Sensortec",
+    "description": "BME280 Pressure/Humidity/Temperature Sensor",
+    "qty": 1,
+    "unit_cost_estimate": 3.80,
+    "currency": "USD"
+  }
+]

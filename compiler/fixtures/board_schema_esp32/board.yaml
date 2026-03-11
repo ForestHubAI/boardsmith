@@ -1,0 +1,50 @@
+boardsmith_fw_schema: "1.0"
+
+board:
+  name: "ESP32 Multi-Sensor Board"
+  mcu:
+    id: U1
+    mpn: ESP32-WROOM-32
+    family: esp32
+
+  buses:
+    - name: I2C_0
+      type: I2C
+      clock_hz: 400000
+      pins:
+        SDA: GPIO21
+        SCL: GPIO22
+      devices:
+        - id: U2
+          mpn: BME280
+          address: "0x76"
+        - id: U3
+          mpn: SSD1306
+          address: "0x3C"
+
+    - name: SPI_FLASH
+      type: SPI
+      clock_hz: 10000000
+      pins:
+        MOSI: GPIO23
+        MISO: GPIO19
+        SCK: GPIO18
+        CS: GPIO5
+      devices:
+        - id: U4
+          mpn: W25Q128JV
+
+    - name: UART_GPS
+      type: UART
+      baud_rate: 9600
+      pins:
+        TX: GPIO17
+        RX: GPIO16
+      devices:
+        - id: U5
+          mpn: NEO-M8N
+
+  power:
+    - name: 3V3
+      voltage: 3.3
+      components: [U2, U3, U4, U5]

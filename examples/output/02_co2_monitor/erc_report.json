@@ -1,0 +1,55 @@
+{
+  "check_type": "erc",
+  "passed": false,
+  "iterations": 3,
+  "initial_errors": 5,
+  "final_errors": 5,
+  "fixes_applied": [
+    "no_connect",
+    "pwr_flag"
+  ],
+  "error_count": 5,
+  "warning_count": 0,
+  "violations": [
+    {
+      "severity": "error",
+      "description": "Pin not connected",
+      "rule_id": "pin_not_connected",
+      "items": [
+        "Symbol U4 Pin 5 [MOSI, Input, Line] @ (2.032, 0.9017)"
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Input pin not driven by any Output pins",
+      "rule_id": "pin_not_driven",
+      "items": [
+        "Symbol U4 Pin 5 [MOSI, Input, Line] @ (2.032, 0.9017)"
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Pin not connected",
+      "rule_id": "pin_not_connected",
+      "items": [
+        "Symbol U4 Pin 6 [MISO, Tri-state, Line] @ (2.032, 0.9271)"
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Pin not connected",
+      "rule_id": "pin_not_connected",
+      "items": [
+        "Symbol U4 Pin 7 [SCLK, Input, Line] @ (2.032, 0.9525)"
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Input pin not driven by any Output pins",
+      "rule_id": "pin_not_driven",
+      "items": [
+        "Symbol U4 Pin 7 [SCLK, Input, Line] @ (2.032, 0.9525)"
+      ]
+    }
+  ]
+}

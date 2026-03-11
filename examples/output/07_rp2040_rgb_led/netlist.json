@@ -1,0 +1,588 @@
+{
+  "format": "boardsmith-fw-netlist",
+  "version": "1.0",
+  "hir_version": "1.1.0",
+  "components": [
+    {
+      "ref": "RP2040",
+      "mpn": "RP2040",
+      "name": "RP2040 Dual-Core ARM Cortex-M0+ MCU",
+      "role": "mcu"
+    },
+    {
+      "ref": "LTST_C150GKT",
+      "mpn": "LTST-C150GKT",
+      "name": "Green Status LED 0603",
+      "role": "actuator"
+    },
+    {
+      "ref": "TXB0104",
+      "mpn": "TXB0104",
+      "name": "TXB0104 4-Bit Bidirectional Voltage Level Translator",
+      "role": "other"
+    },
+    {
+      "ref": "USB_C_CONN",
+      "mpn": "USB-C-CONN",
+      "name": "USB Type-C Receptacle Connector",
+      "role": "other"
+    },
+    {
+      "ref": "W25Q16JVSSIQ",
+      "mpn": "W25Q16JVSSIQ",
+      "name": "W25Q16JVSSIQ 16Mbit QSPI NOR Boot Flash",
+      "role": "memory"
+    },
+    {
+      "ref": "BSS138",
+      "mpn": "BSS138",
+      "name": "BSS138 N-Channel MOSFET Level Shifter",
+      "role": "other"
+    },
+    {
+      "ref": "CONN_SWD_2X5",
+      "mpn": "CONN-SWD-2x5",
+      "name": "ARM SWD 2x5 1.27mm Debug Header",
+      "role": "other"
+    },
+    {
+      "ref": "C1",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_RP2040)",
+      "role": "passive"
+    },
+    {
+      "ref": "C2",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_LTST_C150GKT)",
+      "role": "passive"
+    },
+    {
+      "ref": "C3",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_TXB0104)",
+      "role": "passive"
+    },
+    {
+      "ref": "C4",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_USB_C_CONN)",
+      "role": "passive"
+    },
+    {
+      "ref": "C5",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (bulk_cap_VIN_5V)",
+      "role": "passive"
+    },
+    {
+      "ref": "C6",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (bulk_cap_3V3_REG)",
+      "role": "passive"
+    },
+    {
+      "ref": "C7",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (ldo_input_cap_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "C8",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (ldo_output_bulk_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "C9",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (ldo_output_noise_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "R1",
+      "mpn": "RC0402FR-07330RL",
+      "name": "330\u03a9 Resistor (led_series_LTST_C150GKT)",
+      "role": "passive"
+    },
+    {
+      "ref": "BOOT_R1",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (reset_pullup_RUN)",
+      "role": "passive"
+    },
+    {
+      "ref": "BOOT_C1",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (reset_filter_RUN)",
+      "role": "passive"
+    },
+    {
+      "ref": "BOOT_R2",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (boot_pullup_QSPI_SS)",
+      "role": "passive"
+    },
+    {
+      "ref": "CLK_Y1",
+      "mpn": "HC49-12MHZ",
+      "name": "12MHz Crystal (main_crystal_12mhz)",
+      "role": "passive"
+    },
+    {
+      "ref": "CLK_C1",
+      "mpn": "GRM1555C1H120GA01D",
+      "name": "20pF Capacitor (crystal_load_cap_XIN)",
+      "role": "passive"
+    },
+    {
+      "ref": "CLK_C2",
+      "mpn": "GRM1555C1H120GA01D",
+      "name": "20pF Capacitor (crystal_load_cap_XOUT)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R1",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_LTST-C150GKT_3.3V)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R2",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_LTST-C150GKT_2.1V)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R3",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_3.3V)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R4",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_5.0V)",
+      "role": "passive"
+    },
+    {
+      "ref": "BP_R1",
+      "mpn": "RC0402FR-0733RL",
+      "name": "33\u03a9 Resistor (spi_sck_series_qspi_boot)",
+      "role": "passive"
+    },
+    {
+      "ref": "BP_R2",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (spi_cs_pullup_W25Q16JVSSIQ)",
+      "role": "passive"
+    },
+    {
+      "ref": "CC_R1",
+      "mpn": "RC0402FR-075K1L",
+      "name": "5.1k\u03a9 Resistor (usbc_cc1_pulldown)",
+      "role": "passive"
+    },
+    {
+      "ref": "CC_R2",
+      "mpn": "RC0402FR-075K1L",
+      "name": "5.1k\u03a9 Resistor (usbc_cc2_pulldown)",
+      "role": "passive"
+    },
+    {
+      "ref": "MC_C1",
+      "mpn": "",
+      "name": "10\u00b5FF Cap (mcu_mandatory_Bulk_decoupling_for_IO_supply)",
+      "role": "passive"
+    },
+    {
+      "ref": "MC_C2",
+      "mpn": "",
+      "name": "1\u00b5FF Cap (mcu_mandatory_On-chip_regulator_output_decoupling_(man)",
+      "role": "passive"
+    },
+    {
+      "ref": "MC_R1",
+      "mpn": "",
+      "name": "1k\u03a9\u03a9 Resistor (mcu_mandatory_RP2040_HW_Guide:_1k\u03a9_between_XIN_and_GND)",
+      "role": "passive"
+    },
+    {
+      "ref": "MC_R2",
+      "mpn": "",
+      "name": "27\u03a9\u03a9 Resistor (mcu_mandatory_USB_D+/D-_series_resistors_(2\u00d7_required))",
+      "role": "passive"
+    },
+    {
+      "ref": "U_LDO1",
+      "mpn": "AMS1117-3.3",
+      "name": "AMS1117-3.3 LDO 5V\u21923.3V",
+      "role": "power"
+    }
+  ],
+  "nets": [
+    {
+      "name": "qspi_boot_SCK",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GPIO2"
+        },
+        {
+          "component_id": "W25Q16JVSSIQ",
+          "pin_name": "SCK"
+        }
+      ]
+    },
+    {
+      "name": "qspi_boot_CS_W25Q16JVSSIQ",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GP17"
+        },
+        {
+          "component_id": "W25Q16JVSSIQ",
+          "pin_name": "CS"
+        }
+      ]
+    },
+    {
+      "name": "3V3_REG",
+      "pins": [
+        {
+          "component_id": "C1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C6",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BOOT_R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BOOT_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BP_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "MC_C1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "pins": [
+        {
+          "component_id": "C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C5",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C6",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "BOOT_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "VIN_5V",
+      "pins": [
+        {
+          "component_id": "C5",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "LED_LTST_C150GKT_A",
+      "pins": [
+        {
+          "component_id": "R1",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "NET_RUN",
+      "pins": [
+        {
+          "component_id": "BOOT_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "BOOT_C1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "NET_QSPI_SS",
+      "pins": [
+        {
+          "component_id": "BOOT_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "NET_XIN",
+      "pins": [
+        {
+          "component_id": "CLK_Y1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "CLK_C1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "NET_XOUT",
+      "pins": [
+        {
+          "component_id": "CLK_Y1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C2",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "LS_LTST_C150GKT_SIG",
+      "pins": [
+        {
+          "component_id": "LS_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "LS_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "5V",
+      "pins": [
+        {
+          "component_id": "LS_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R4",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "LS_USB_C_CONN_SIG",
+      "pins": [
+        {
+          "component_id": "LS_R3",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "LS_R4",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "QSPI_BOOT_SCK_MCU",
+      "pins": [
+        {
+          "component_id": "BP_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "QSPI_BOOT_SCK",
+      "pins": [
+        {
+          "component_id": "BP_R1",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "QSPI_BOOT_CS_W25Q16JVSSIQ",
+      "pins": [
+        {
+          "component_id": "BP_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "USB_C_CONN_CC1",
+      "pins": [
+        {
+          "component_id": "CC_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "USB_C_CONN_CC2",
+      "pins": [
+        {
+          "component_id": "CC_R2",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "VREG_VOUT_DECOUPLE",
+      "pins": [
+        {
+          "component_id": "MC_C2",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "USB_BOOT",
+      "pins": [
+        {
+          "component_id": "MC_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "USB_SERIES",
+      "pins": [
+        {
+          "component_id": "MC_R2",
+          "pin_name": "1"
+        }
+      ]
+    }
+  ],
+  "buses": [
+    {
+      "name": "qspi_boot",
+      "type": "SPI",
+      "master": "RP2040",
+      "slaves": [
+        "W25Q16JVSSIQ"
+      ],
+      "pin_assignments": {
+        "RX": "GPIO0",
+        "CSn": "GPIO1",
+        "SCK": "GPIO2",
+        "TX": "GPIO3",
+        "CS_W25Q16JVSSIQ": "GP17"
+      },
+      "slave_addresses": {}
+    }
+  ]
+}

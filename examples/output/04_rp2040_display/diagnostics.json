@@ -1,0 +1,126 @@
+{
+  "tool": "boardsmith-fw",
+  "version": "0.6.0",
+  "hir_version": "1.1.0",
+  "valid": true,
+  "summary": {
+    "total": 8,
+    "errors": 0,
+    "warnings": 1,
+    "info": 7,
+    "unknown": 1
+  },
+  "diagnostics": [
+    {
+      "id": "schema.validation.ok",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "HIR JSON schema validation passed",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "i2c_addr.i2c0.SSD1306.ok",
+      "category": "protocol",
+      "severity": "info",
+      "status": "pass",
+      "message": "I2C address 0x3c on bus 'i2c0' for 'SSD1306' is unique",
+      "affected_components": [
+        "SSD1306"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.RP2040.SSD1306.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'RP2040' \u2192 'SSD1306'",
+      "affected_components": [
+        "RP2040",
+        "SSD1306"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.RP2040.W25Q16JVSSIQ.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'RP2040' \u2192 'W25Q16JVSSIQ'",
+      "affected_components": [
+        "RP2040",
+        "W25Q16JVSSIQ"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.SSD1306.ok",
+      "category": "knowledge",
+      "severity": "info",
+      "status": "pass",
+      "message": "Init contract present for 'SSD1306'",
+      "affected_components": [
+        "SSD1306"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.W25Q16JVSSIQ.missing",
+      "category": "knowledge",
+      "severity": "warning",
+      "status": "unknown",
+      "message": "No init_contract found for peripheral 'W25Q16JVSSIQ'",
+      "affected_components": [
+        "W25Q16JVSSIQ"
+      ],
+      "suggested_fixes": [
+        "Add init_contract for this component in the HIR or knowledge DB"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "spi.cs.qspi_boot.W25Q16JVSSIQ.ok",
+      "category": "protocol",
+      "severity": "info",
+      "status": "pass",
+      "message": "SPI chip-select for 'W25Q16JVSSIQ' on bus 'qspi_boot' is unique",
+      "affected_components": [
+        "W25Q16JVSSIQ"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "bom.complete",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "BOM covers all active components",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    }
+  ]
+}

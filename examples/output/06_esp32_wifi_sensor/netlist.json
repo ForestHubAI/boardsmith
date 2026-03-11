@@ -1,0 +1,440 @@
+{
+  "format": "boardsmith-fw-netlist",
+  "version": "1.0",
+  "hir_version": "1.1.0",
+  "components": [
+    {
+      "ref": "ESP32_WROOM_32",
+      "mpn": "ESP32-WROOM-32",
+      "name": "ESP32 Wi-Fi+BT Module",
+      "role": "mcu"
+    },
+    {
+      "ref": "BME280",
+      "mpn": "BME280",
+      "name": "BME280 Pressure/Humidity/Temperature Sensor",
+      "role": "sensor"
+    },
+    {
+      "ref": "BME680",
+      "mpn": "BME680",
+      "name": "BME680 Environmental Sensor + VOC Gas",
+      "role": "sensor"
+    },
+    {
+      "ref": "CONN_UART_4PIN",
+      "mpn": "CONN-UART-4PIN",
+      "name": "UART Header Connector 4-Pin 2.54mm",
+      "role": "other"
+    },
+    {
+      "ref": "USB_C_CONN",
+      "mpn": "USB-C-CONN",
+      "name": "USB Type-C Receptacle Connector",
+      "role": "other"
+    },
+    {
+      "ref": "BSS138",
+      "mpn": "BSS138",
+      "name": "BSS138 N-Channel MOSFET Level Shifter",
+      "role": "other"
+    },
+    {
+      "ref": "R1",
+      "mpn": "RC0402FR-074K7L",
+      "name": "3.3k\u03a9 Resistor (i2c_pullup_sda_i2c0)",
+      "role": "passive"
+    },
+    {
+      "ref": "R2",
+      "mpn": "RC0402FR-074K7L",
+      "name": "3.3k\u03a9 Resistor (i2c_pullup_scl_i2c0)",
+      "role": "passive"
+    },
+    {
+      "ref": "C1",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_ESP32_WROOM_32)",
+      "role": "passive"
+    },
+    {
+      "ref": "C2",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_BME280)",
+      "role": "passive"
+    },
+    {
+      "ref": "C3",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_BME680)",
+      "role": "passive"
+    },
+    {
+      "ref": "C4",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_CONN_UART_4PIN)",
+      "role": "passive"
+    },
+    {
+      "ref": "C5",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (decoupling_vdd_USB_C_CONN)",
+      "role": "passive"
+    },
+    {
+      "ref": "C6",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (bulk_cap_VIN_5V)",
+      "role": "passive"
+    },
+    {
+      "ref": "C7",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (bulk_cap_3V3_REG)",
+      "role": "passive"
+    },
+    {
+      "ref": "C8",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (ldo_input_cap_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "C9",
+      "mpn": "GRM188R61A106KE69D",
+      "name": "10uF Capacitor (ldo_output_bulk_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "C10",
+      "mpn": "GRM155R71C104KA88D",
+      "name": "100nF Capacitor (ldo_output_noise_U_LDO1)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R1",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_3.3V)",
+      "role": "passive"
+    },
+    {
+      "ref": "LS_R2",
+      "mpn": "RC0402FR-0710KL",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_5.0V)",
+      "role": "passive"
+    },
+    {
+      "ref": "BP_R1",
+      "mpn": "RC0402FR-07470RL",
+      "name": "470\u03a9 Resistor (uart_tx_series_uart0)",
+      "role": "passive"
+    },
+    {
+      "ref": "BP_R2",
+      "mpn": "RC0402FR-07470RL",
+      "name": "470\u03a9 Resistor (uart_rx_series_uart0)",
+      "role": "passive"
+    },
+    {
+      "ref": "CC_R1",
+      "mpn": "RC0402FR-075K1L",
+      "name": "5.1k\u03a9 Resistor (usbc_cc1_pulldown)",
+      "role": "passive"
+    },
+    {
+      "ref": "CC_R2",
+      "mpn": "RC0402FR-075K1L",
+      "name": "5.1k\u03a9 Resistor (usbc_cc2_pulldown)",
+      "role": "passive"
+    },
+    {
+      "ref": "U_LDO1",
+      "mpn": "AMS1117-3.3",
+      "name": "AMS1117-3.3 LDO 5V\u21923.3V",
+      "role": "power"
+    }
+  ],
+  "nets": [
+    {
+      "name": "i2c0_SDA",
+      "pins": [
+        {
+          "component_id": "ESP32_WROOM_32",
+          "pin_name": "21"
+        },
+        {
+          "component_id": "BME280",
+          "pin_name": "SDA"
+        },
+        {
+          "component_id": "BME680",
+          "pin_name": "SDA"
+        },
+        {
+          "component_id": "R1",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "i2c0_SCL",
+      "pins": [
+        {
+          "component_id": "ESP32_WROOM_32",
+          "pin_name": "22"
+        },
+        {
+          "component_id": "BME280",
+          "pin_name": "SCL"
+        },
+        {
+          "component_id": "BME680",
+          "pin_name": "SCL"
+        },
+        {
+          "component_id": "R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "uart0_TX_MCU",
+      "pins": [
+        {
+          "component_id": "ESP32_WROOM_32",
+          "pin_name": "17"
+        },
+        {
+          "component_id": "BP_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "uart0_TX",
+      "pins": [
+        {
+          "component_id": "CONN_UART_4PIN",
+          "pin_name": "TX"
+        },
+        {
+          "component_id": "BP_R1",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "uart0_RX_MCU",
+      "pins": [
+        {
+          "component_id": "ESP32_WROOM_32",
+          "pin_name": "16"
+        },
+        {
+          "component_id": "BP_R2",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "uart0_RX",
+      "pins": [
+        {
+          "component_id": "CONN_UART_4PIN",
+          "pin_name": "RX"
+        },
+        {
+          "component_id": "BP_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "3V3_REG",
+      "pins": [
+        {
+          "component_id": "R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C5",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C10",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "pins": [
+        {
+          "component_id": "C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C5",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C6",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C10",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "VIN_5V",
+      "pins": [
+        {
+          "component_id": "C6",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "LS_USB_C_CONN_SIG",
+      "pins": [
+        {
+          "component_id": "LS_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "LS_R2",
+          "pin_name": "2"
+        }
+      ]
+    },
+    {
+      "name": "5V",
+      "pins": [
+        {
+          "component_id": "LS_R2",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "USB_C_CONN_CC1",
+      "pins": [
+        {
+          "component_id": "CC_R1",
+          "pin_name": "1"
+        }
+      ]
+    },
+    {
+      "name": "USB_C_CONN_CC2",
+      "pins": [
+        {
+          "component_id": "CC_R2",
+          "pin_name": "1"
+        }
+      ]
+    }
+  ],
+  "buses": [
+    {
+      "name": "i2c0",
+      "type": "I2C",
+      "master": "ESP32_WROOM_32",
+      "slaves": [
+        "BME280",
+        "BME680"
+      ],
+      "pin_assignments": {
+        "SDA": "21",
+        "SCL": "22"
+      },
+      "slave_addresses": {
+        "BME280": "0x76",
+        "BME680": "0x77"
+      }
+    },
+    {
+      "name": "uart0",
+      "type": "UART",
+      "master": "ESP32_WROOM_32",
+      "slaves": [
+        "CONN_UART_4PIN"
+      ],
+      "pin_assignments": {
+        "TX": "17",
+        "RX": "16"
+      },
+      "slave_addresses": {}
+    }
+  ]
+}

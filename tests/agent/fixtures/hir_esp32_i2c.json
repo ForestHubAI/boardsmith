@@ -1,0 +1,53 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "U1",
+      "name": "ESP32",
+      "role": "mcu",
+      "mpn": "ESP32-WROOM-32",
+      "interface_types": ["I2C"],
+      "pins": [],
+      "provenance": {"source_type": "builtin_db", "confidence": 0.95, "evidence": []}
+    },
+    {
+      "id": "U2",
+      "name": "BME280",
+      "role": "sensor",
+      "mpn": "BME280",
+      "interface_types": ["I2C"],
+      "pins": [],
+      "provenance": {"source_type": "builtin_db", "confidence": 0.92, "evidence": []}
+    }
+  ],
+  "nets": [],
+  "buses": [],
+  "bus_contracts": [
+    {
+      "bus_name": "I2C_1",
+      "bus_type": "I2C",
+      "master_id": "U1",
+      "slave_ids": ["U2"],
+      "configured_clock_hz": 400000,
+      "pin_assignments": {"SDA": "GPIO21", "SCL": "GPIO22"},
+      "slave_addresses": {"U2": "0x76"},
+      "i2c": {
+        "pullup_ohm_min": 4700,
+        "pullup_ohm_max": 4700
+      }
+    }
+  ],
+  "electrical_specs": [],
+  "init_contracts": [],
+  "power_sequence": {"rails": [], "dependencies": []},
+  "constraints": [],
+  "bom": [],
+  "metadata": {
+    "created_at": "2026-03-10T00:00:00",
+    "track": "B",
+    "confidence": {"overall": 0.9, "subscores": null, "explanations": []},
+    "assumptions": [],
+    "session_id": null
+  }
+}

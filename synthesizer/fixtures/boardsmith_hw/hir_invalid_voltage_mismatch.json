@@ -1,0 +1,69 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "STM32F103C8T6",
+      "name": "STM32F103 MCU",
+      "role": "mcu",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "STM32F103C8T6",
+      "interface_types": ["I2C", "SPI", "UART"],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "id": "BME280",
+      "name": "BME280 Sensor",
+      "role": "sensor",
+      "manufacturer": "Bosch",
+      "mpn": "BME280",
+      "interface_types": ["I2C"],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "nets": [],
+  "buses": [],
+  "bus_contracts": [
+    {
+      "bus_name": "i2c0",
+      "bus_type": "I2C",
+      "master_id": "STM32F103C8T6",
+      "slave_ids": ["BME280"],
+      "configured_clock_hz": 400000,
+      "pin_assignments": { "SDA": "PB7", "SCL": "PB6" },
+      "slave_addresses": { "BME280": "0x76" },
+      "i2c": { "max_clock_hz": 400000, "address_bits": 7 }
+    }
+  ],
+  "electrical_specs": [
+    {
+      "component_id": "STM32F103C8T6",
+      "supply_voltage": { "nominal": 5.0, "min": 4.5, "max": 5.5 },
+      "io_voltage": { "nominal": 5.0, "min": 4.5, "max": 5.5 },
+      "is_5v_tolerant": true,
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "component_id": "BME280",
+      "supply_voltage": { "nominal": 2.655, "min": 1.71, "max": 3.6 },
+      "io_voltage": { "nominal": 3.3, "min": 1.2, "max": 3.6 },
+      "is_5v_tolerant": false,
+      "abs_max_voltage": 4.25,
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "init_contracts": [],
+  "power_sequence": { "rails": [], "dependencies": [] },
+  "constraints": [],
+  "bom": [
+    { "line_id": "L001", "component_id": "STM32F103C8T6", "mpn": "STM32F103C8T6", "qty": 1 },
+    { "line_id": "L002", "component_id": "BME280", "mpn": "BME280", "qty": 1 }
+  ],
+  "metadata": {
+    "created_at": "2026-02-18T00:00:00+00:00",
+    "track": "B",
+    "confidence": { "overall": 0.4, "explanations": ["Voltage mismatch — 5V MCU driving 3.3V sensor"] },
+    "assumptions": ["STM32 configured at 5V IO driving BME280 which is 3.3V only — voltage mismatch expected"],
+    "session_id": "fixture-voltage-001"
+  }
+}

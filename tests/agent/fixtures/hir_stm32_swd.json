@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "U1",
+      "name": "STM32F103",
+      "role": "mcu",
+      "mpn": "STM32F103C8",
+      "interface_types": ["SPI", "I2C", "UART"],
+      "pins": [],
+      "provenance": {"source_type": "builtin_db", "confidence": 0.95, "evidence": []}
+    },
+    {
+      "id": "U2",
+      "name": "LD1117",
+      "role": "power",
+      "mpn": "LD1117-3.3",
+      "interface_types": [],
+      "pins": [],
+      "provenance": {"source_type": "builtin_db", "confidence": 0.90, "evidence": []}
+    }
+  ],
+  "nets": [],
+  "buses": [],
+  "bus_contracts": [],
+  "electrical_specs": [],
+  "init_contracts": [],
+  "power_sequence": {"rails": [], "dependencies": []},
+  "constraints": [],
+  "bom": [],
+  "metadata": {
+    "created_at": "2026-03-10T00:00:00",
+    "track": "B",
+    "confidence": {"overall": 0.9, "subscores": null, "explanations": []},
+    "assumptions": [],
+    "session_id": null
+  }
+}

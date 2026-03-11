@@ -1,0 +1,24 @@
+Qty,MPN,Description,Manufacturer,UnitCost_USD,ComponentID
+1.0,ESP32-WROOM-32,ESP32 Wi-Fi+BT Module,Espressif,3.5,ESP32_WROOM_32
+1.0,TP4056,TP4056 1A LiPo Battery Charger,NanjingTopPower,0.5,TP4056
+1.0,BME280,BME280 Pressure/Humidity/Temperature Sensor,Bosch Sensortec,3.8,BME280
+1.0,USB-C-CONN,USB Type-C Receptacle Connector,Generic,0.6,USB_C_CONN
+1.0,BSS138,BSS138 N-Channel MOSFET Level Shifter,ON Semiconductor,0.05,BSS138
+1.0,RC0402FR-074K7L,3.3kΩ resistor — i2c pullup sda i2c0,,0.01,R1
+1.0,RC0402FR-074K7L,3.3kΩ resistor — i2c pullup scl i2c0,,0.01,R2
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd ESP32 WROOM 32,,0.02,C1
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd TP4056,,0.02,C2
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd BME280,,0.02,C3
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd USB C CONN,,0.02,C4
+1.0,GRM188R61A106KE69D,10uF capacitor — bulk cap VIN 3V,,0.05,C5
+1.0,GRM188R61A106KE69D,10uF capacitor — bulk cap 3V3 REG,,0.05,C6
+1.0,GRM188R61A106KE69D,10uF capacitor — ldo input cap U LDO1,,0.05,C7
+1.0,GRM188R61A106KE69D,10uF capacitor — ldo output bulk U LDO1,,0.05,C8
+1.0,GRM155R71C104KA88D,100nF capacitor — ldo output noise U LDO1,,0.02,C9
+1.0,RC0402FR-0710KL,10kΩ resistor — levelshift pullup TP4056 3.3V,,0.01,LS_R1
+1.0,RC0402FR-0710KL,10kΩ resistor — levelshift pullup TP4056 5.0V,,0.01,LS_R2
+1.0,RC0402FR-0710KL,10kΩ resistor — levelshift pullup USB-C-CONN 3.3V,,0.01,LS_R3
+1.0,RC0402FR-0710KL,10kΩ resistor — levelshift pullup USB-C-CONN 5.0V,,0.01,LS_R4
+1.0,RC0402FR-075K1L,5.1kΩ resistor — usbc cc1 pulldown,,0.01,CC_R1
+1.0,RC0402FR-075K1L,5.1kΩ resistor — usbc cc2 pulldown,,0.01,CC_R2
+1.0,AMS1117-3.3,"LDO Voltage Regulator VIN_3V→3V3_REG (4V→3.3V, 800mA max)",Advanced Monolithic Systems,0.3,U_LDO1

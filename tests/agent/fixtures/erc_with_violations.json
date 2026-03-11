@@ -1,0 +1,29 @@
+{
+  "coordinate_units": "mm",
+  "date": "2024-01-01T00:00:00",
+  "sheets": [
+    {
+      "sheet_name": "/",
+      "violations": [
+        {
+          "description": "Pin unconnected",
+          "items": [{"description": "Pin BOOT0 of U1", "pos": {"x": 100.0, "y": 50.0}}],
+          "severity": "error",
+          "type": "pin_not_connected"
+        },
+        {
+          "description": "Power pin not driven",
+          "items": [{"description": "Pin ~PWR of #PWR02", "pos": {"x": 55.0, "y": 30.0}}],
+          "severity": "error",
+          "type": "power_pin_not_driven"
+        },
+        {
+          "description": "Conflicting net assignments",
+          "items": [{"description": "Net GND conflicts at junction", "pos": {"x": 80.0, "y": 40.0}}],
+          "severity": "error",
+          "type": "net_conflict"
+        }
+      ]
+    }
+  ]
+}

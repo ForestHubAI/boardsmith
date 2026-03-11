@@ -1,0 +1,2384 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "RP2040",
+      "name": "RP2040 Dual-Core ARM Cortex-M0+ MCU",
+      "role": "mcu",
+      "manufacturer": "Raspberry Pi Ltd",
+      "mpn": "RP2040",
+      "package": null,
+      "interface_types": [
+        "I2C",
+        "SPI",
+        "UART",
+        "GPIO",
+        "ADC",
+        "PWM",
+        "OTHER"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "SSD1306",
+      "name": "SSD1306 OLED Display Controller",
+      "role": "other",
+      "manufacturer": "Solomon Systech",
+      "mpn": "SSD1306",
+      "package": null,
+      "interface_types": [
+        "I2C",
+        "SPI"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "LTST_C150GKT",
+      "name": "Green Status LED 0603",
+      "role": "actuator",
+      "manufacturer": "Lite-On",
+      "mpn": "LTST-C150GKT",
+      "package": null,
+      "interface_types": [
+        "GPIO"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "USB_C_CONN",
+      "name": "USB Type-C Receptacle Connector",
+      "role": "other",
+      "manufacturer": "Generic",
+      "mpn": "USB-C-CONN",
+      "package": null,
+      "interface_types": [
+        "OTHER"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "W25Q16JVSSIQ",
+      "name": "W25Q16JVSSIQ 16Mbit QSPI NOR Boot Flash",
+      "role": "memory",
+      "manufacturer": "Winbond",
+      "mpn": "W25Q16JVSSIQ",
+      "package": null,
+      "interface_types": [
+        "SPI"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BSS138",
+      "name": "BSS138 N-Channel MOSFET Level Shifter",
+      "role": "other",
+      "manufacturer": "ON Semiconductor",
+      "mpn": "BSS138",
+      "package": null,
+      "interface_types": [
+        "GPIO"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CONN_SWD_2X5",
+      "name": "ARM SWD 2x5 1.27mm Debug Header",
+      "role": "other",
+      "manufacturer": "Generic",
+      "mpn": "CONN-SWD-2x5",
+      "package": null,
+      "interface_types": [
+        "OTHER"
+      ],
+      "pins": [],
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "R1",
+      "name": "2.2k\u03a9 Resistor (i2c_pullup_sda_i2c0)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-072K2L",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "R2",
+      "name": "2.2k\u03a9 Resistor (i2c_pullup_scl_i2c0)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-072K2L",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C1",
+      "name": "100nF Capacitor (decoupling_vdd_RP2040)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C2",
+      "name": "100nF Capacitor (decoupling_vdd_SSD1306)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C3",
+      "name": "100nF Capacitor (decoupling_vdd_LTST_C150GKT)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C4",
+      "name": "100nF Capacitor (decoupling_vdd_USB_C_CONN)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C5",
+      "name": "10uF Capacitor (bulk_cap_VIN_5V)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM188R61A106KE69D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C6",
+      "name": "10uF Capacitor (bulk_cap_3V3_REG)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM188R61A106KE69D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C7",
+      "name": "10uF Capacitor (ldo_input_cap_U_LDO1)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM188R61A106KE69D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C8",
+      "name": "10uF Capacitor (ldo_output_bulk_U_LDO1)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM188R61A106KE69D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C9",
+      "name": "100nF Capacitor (ldo_output_noise_U_LDO1)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "R3",
+      "name": "330\u03a9 Resistor (led_series_LTST_C150GKT)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-07330RL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BOOT_R1",
+      "name": "10k\u03a9 Resistor (reset_pullup_RUN)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BOOT_C1",
+      "name": "100nF Capacitor (reset_filter_RUN)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM155R71C104KA88D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BOOT_R2",
+      "name": "10k\u03a9 Resistor (boot_pullup_QSPI_SS)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CLK_Y1",
+      "name": "12MHz Crystal (main_crystal_12mhz)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "HC49-12MHZ",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CLK_C1",
+      "name": "20pF Capacitor (crystal_load_cap_XIN)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM1555C1H120GA01D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CLK_C2",
+      "name": "20pF Capacitor (crystal_load_cap_XOUT)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "GRM1555C1H120GA01D",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "LS_R1",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_LTST-C150GKT_3.3V)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "LS_R2",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_LTST-C150GKT_2.1V)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "LS_R3",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_3.3V)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "LS_R4",
+      "name": "10k\u03a9 Resistor (levelshift_pullup_USB-C-CONN_5.0V)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BP_R1",
+      "name": "33\u03a9 Resistor (spi_sck_series_qspi_boot)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0733RL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "BP_R2",
+      "name": "10k\u03a9 Resistor (spi_cs_pullup_W25Q16JVSSIQ)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-0710KL",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CC_R1",
+      "name": "5.1k\u03a9 Resistor (usbc_cc1_pulldown)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-075K1L",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "CC_R2",
+      "name": "5.1k\u03a9 Resistor (usbc_cc2_pulldown)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "RC0402FR-075K1L",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "MC_C1",
+      "name": "10\u00b5FF Cap (mcu_mandatory_Bulk_decoupling_for_IO_supply)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "MC_C2",
+      "name": "1\u00b5FF Cap (mcu_mandatory_On-chip_regulator_output_decoupling_(man)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "MC_R1",
+      "name": "1k\u03a9\u03a9 Resistor (mcu_mandatory_RP2040_HW_Guide:_1k\u03a9_between_XIN_and_GND)",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "MC_R2",
+      "name": "27\u03a9\u03a9 Resistor (mcu_mandatory_USB_D+/D-_series_resistors_(2\u00d7_required))",
+      "role": "passive",
+      "manufacturer": null,
+      "mpn": "",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "id": "U_LDO1",
+      "name": "AMS1117-3.3 LDO 5V\u21923.3V",
+      "role": "power",
+      "manufacturer": "Advanced Monolithic Systems",
+      "mpn": "AMS1117-3.3",
+      "package": null,
+      "interface_types": [],
+      "pins": [],
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.9,
+        "evidence": []
+      }
+    }
+  ],
+  "nets": [
+    {
+      "name": "i2c0_SDA",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GPIO0"
+        },
+        {
+          "component_id": "SSD1306",
+          "pin_name": "SDA"
+        },
+        {
+          "component_id": "R1",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    },
+    {
+      "name": "i2c0_SCL",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GPIO1"
+        },
+        {
+          "component_id": "SSD1306",
+          "pin_name": "SCL"
+        },
+        {
+          "component_id": "R2",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    },
+    {
+      "name": "qspi_boot_SCK",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GPIO18"
+        },
+        {
+          "component_id": "W25Q16JVSSIQ",
+          "pin_name": "SCK"
+        }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    },
+    {
+      "name": "qspi_boot_CS_W25Q16JVSSIQ",
+      "pins": [
+        {
+          "component_id": "RP2040",
+          "pin_name": "GP17"
+        },
+        {
+          "component_id": "W25Q16JVSSIQ",
+          "pin_name": "CS"
+        }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    },
+    {
+      "name": "3V3_REG",
+      "pins": [
+        {
+          "component_id": "R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C6",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "R3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BOOT_R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BOOT_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R3",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "BP_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "MC_C1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": true,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "GND",
+      "pins": [
+        {
+          "component_id": "C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C3",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C4",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C5",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C6",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C8",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "C9",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "BOOT_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CC_R2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_C1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_C2",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "MC_R2",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": true,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "VIN_5V",
+      "pins": [
+        {
+          "component_id": "C5",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "C7",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": true,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "LED_LTST_C150GKT_A",
+      "pins": [
+        {
+          "component_id": "R3",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "NET_RUN",
+      "pins": [
+        {
+          "component_id": "BOOT_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "BOOT_C1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "NET_QSPI_SS",
+      "pins": [
+        {
+          "component_id": "BOOT_R2",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "NET_XIN",
+      "pins": [
+        {
+          "component_id": "CLK_Y1",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "CLK_C1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "NET_XOUT",
+      "pins": [
+        {
+          "component_id": "CLK_Y1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "CLK_C2",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "LS_LTST_C150GKT_SIG",
+      "pins": [
+        {
+          "component_id": "LS_R1",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "LS_R2",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "5V",
+      "pins": [
+        {
+          "component_id": "LS_R2",
+          "pin_name": "1"
+        },
+        {
+          "component_id": "LS_R4",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "LS_USB_C_CONN_SIG",
+      "pins": [
+        {
+          "component_id": "LS_R3",
+          "pin_name": "2"
+        },
+        {
+          "component_id": "LS_R4",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "QSPI_BOOT_SCK_MCU",
+      "pins": [
+        {
+          "component_id": "BP_R1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "QSPI_BOOT_SCK",
+      "pins": [
+        {
+          "component_id": "BP_R1",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "QSPI_BOOT_CS_W25Q16JVSSIQ",
+      "pins": [
+        {
+          "component_id": "BP_R2",
+          "pin_name": "2"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "USB_C_CONN_CC1",
+      "pins": [
+        {
+          "component_id": "CC_R1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "USB_C_CONN_CC2",
+      "pins": [
+        {
+          "component_id": "CC_R2",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "VREG_VOUT_DECOUPLE",
+      "pins": [
+        {
+          "component_id": "MC_C2",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "USB_BOOT",
+      "pins": [
+        {
+          "component_id": "MC_R1",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "name": "USB_SERIES",
+      "pins": [
+        {
+          "component_id": "MC_R2",
+          "pin_name": "1"
+        }
+      ],
+      "is_bus": false,
+      "is_power": false,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    }
+  ],
+  "buses": [
+    {
+      "name": "i2c0",
+      "type": "I2C",
+      "master_component_id": "RP2040",
+      "slave_component_ids": [
+        "SSD1306"
+      ],
+      "pin_mapping": []
+    },
+    {
+      "name": "qspi_boot",
+      "type": "SPI",
+      "master_component_id": "RP2040",
+      "slave_component_ids": [
+        "W25Q16JVSSIQ"
+      ],
+      "pin_mapping": []
+    }
+  ],
+  "bus_contracts": [
+    {
+      "bus_name": "i2c0",
+      "bus_type": "I2C",
+      "master_id": "RP2040",
+      "slave_ids": [
+        "SSD1306"
+      ],
+      "configured_clock_hz": 400000,
+      "pin_assignments": {
+        "SDA": "GPIO0",
+        "SCL": "GPIO1"
+      },
+      "slave_addresses": {
+        "SSD1306": "0x3C"
+      },
+      "i2c": {
+        "address": null,
+        "address_bits": 7,
+        "max_clock_hz": 400000,
+        "min_clock_hz": null,
+        "t_rise_ns": null,
+        "t_fall_ns": null,
+        "t_su_dat_ns": null,
+        "t_hd_dat_ns": null,
+        "t_su_sta_ns": null,
+        "t_buf_ns": null,
+        "pullup_ohm_min": null,
+        "pullup_ohm_max": null,
+        "bus_capacitance_pf_max": null
+      },
+      "spi": null,
+      "uart": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    },
+    {
+      "bus_name": "qspi_boot",
+      "bus_type": "SPI",
+      "master_id": "RP2040",
+      "slave_ids": [
+        "W25Q16JVSSIQ"
+      ],
+      "configured_clock_hz": 1000000,
+      "pin_assignments": {
+        "RX": "GPIO16",
+        "CSn": "GPIO17",
+        "SCK": "GPIO18",
+        "TX": "GPIO19",
+        "CS_W25Q16JVSSIQ": "GP17"
+      },
+      "slave_addresses": {},
+      "i2c": null,
+      "spi": {
+        "max_clock_hz": 1000000,
+        "mode": 0,
+        "bit_order": "MSB",
+        "cs_active": "low",
+        "cs_setup_ns": null,
+        "cs_hold_ns": null
+      },
+      "uart": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.7,
+        "evidence": []
+      }
+    }
+  ],
+  "electrical_specs": [
+    {
+      "component_id": "RP2040",
+      "supply_voltage": {
+        "nominal": 2.7,
+        "min": 1.8,
+        "max": 3.6,
+        "unit": "V"
+      },
+      "io_voltage": {
+        "nominal": 3.3,
+        "min": 1.8,
+        "max": 3.3,
+        "unit": "V"
+      },
+      "logic_high_min": 2.0,
+      "logic_low_max": 0.8,
+      "current_draw": {
+        "typical": 25.0,
+        "max": 120.0,
+        "unit": "mA"
+      },
+      "is_5v_tolerant": false,
+      "drive_strength_ma": 12.0,
+      "input_capacitance_pf": null,
+      "abs_max_voltage": 3.63,
+      "temp_min_c": -40.0,
+      "temp_max_c": 85.0,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "component_id": "SSD1306",
+      "supply_voltage": {
+        "nominal": 2.4749999999999996,
+        "min": 1.65,
+        "max": 3.3,
+        "unit": "V"
+      },
+      "io_voltage": {
+        "nominal": 3.3,
+        "min": 1.65,
+        "max": 3.3,
+        "unit": "V"
+      },
+      "logic_high_min": null,
+      "logic_low_max": null,
+      "current_draw": {
+        "typical": 9.0,
+        "max": 25.0,
+        "unit": "mA"
+      },
+      "is_5v_tolerant": false,
+      "drive_strength_ma": null,
+      "input_capacitance_pf": null,
+      "abs_max_voltage": 4.0,
+      "temp_min_c": -40.0,
+      "temp_max_c": 85.0,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "component_id": "LTST_C150GKT",
+      "supply_voltage": {
+        "nominal": 2.7,
+        "min": 1.8,
+        "max": 3.6,
+        "unit": "V"
+      },
+      "io_voltage": {
+        "nominal": 2.1,
+        "min": 1.8,
+        "max": 3.6,
+        "unit": "V"
+      },
+      "logic_high_min": null,
+      "logic_low_max": null,
+      "current_draw": {
+        "typical": 10.0,
+        "max": 20.0,
+        "unit": "mA"
+      },
+      "is_5v_tolerant": false,
+      "drive_strength_ma": 20.0,
+      "input_capacitance_pf": null,
+      "abs_max_voltage": 4.0,
+      "temp_min_c": -40.0,
+      "temp_max_c": 85.0,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "component_id": "USB_C_CONN",
+      "supply_voltage": {
+        "nominal": 5.0,
+        "min": 0.0,
+        "max": 20.0,
+        "unit": "V"
+      },
+      "io_voltage": {
+        "nominal": 5.0,
+        "min": null,
+        "max": null,
+        "unit": "V"
+      },
+      "logic_high_min": null,
+      "logic_low_max": null,
+      "current_draw": {
+        "typical": 0.0,
+        "max": 3000.0,
+        "unit": "mA"
+      },
+      "is_5v_tolerant": null,
+      "drive_strength_ma": null,
+      "input_capacitance_pf": null,
+      "abs_max_voltage": 20.0,
+      "temp_min_c": -30.0,
+      "temp_max_c": 80.0,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "component_id": "W25Q16JVSSIQ",
+      "supply_voltage": {
+        "nominal": 3.1500000000000004,
+        "min": 2.7,
+        "max": 3.6,
+        "unit": "V"
+      },
+      "io_voltage": {
+        "nominal": 3.3,
+        "min": null,
+        "max": null,
+        "unit": "V"
+      },
+      "logic_high_min": null,
+      "logic_low_max": null,
+      "current_draw": null,
+      "is_5v_tolerant": null,
+      "drive_strength_ma": null,
+      "input_capacitance_pf": null,
+      "abs_max_voltage": null,
+      "temp_min_c": null,
+      "temp_max_c": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    }
+  ],
+  "init_contracts": [
+    {
+      "component_id": "RP2040",
+      "component_name": "RP2040 Dual-Core ARM Cortex-M0+ MCU",
+      "phases": [
+        {
+          "phase": "reset",
+          "order": 0,
+          "writes": [],
+          "reads": [],
+          "delay_after_ms": 10,
+          "precondition": null,
+          "postcondition": null,
+          "provenance": {
+            "source_type": "builtin_db",
+            "source_ref": null,
+            "confidence": 0.95,
+            "evidence": []
+          }
+        },
+        {
+          "phase": "configure",
+          "order": 1,
+          "writes": [],
+          "reads": [],
+          "delay_after_ms": null,
+          "precondition": null,
+          "postcondition": null,
+          "provenance": {
+            "source_type": "builtin_db",
+            "source_ref": null,
+            "confidence": 0.95,
+            "evidence": []
+          }
+        }
+      ],
+      "irq_gpio": null,
+      "irq_trigger": "falling"
+    },
+    {
+      "component_id": "SSD1306",
+      "component_name": "SSD1306 OLED Display Controller",
+      "phases": [
+        {
+          "phase": "reset",
+          "order": 0,
+          "writes": [
+            {
+              "reg_addr": "0x00",
+              "value": "0xAE",
+              "description": "Display OFF",
+              "purpose": null
+            }
+          ],
+          "reads": [],
+          "delay_after_ms": null,
+          "precondition": null,
+          "postcondition": null,
+          "provenance": {
+            "source_type": "builtin_db",
+            "source_ref": null,
+            "confidence": 0.95,
+            "evidence": []
+          }
+        },
+        {
+          "phase": "configure",
+          "order": 1,
+          "writes": [
+            {
+              "reg_addr": "0x00",
+              "value": "0xD5",
+              "description": "Set display clock div",
+              "purpose": null
+            },
+            {
+              "reg_addr": "0x00",
+              "value": "0x80",
+              "description": "Clock div ratio",
+              "purpose": null
+            },
+            {
+              "reg_addr": "0x00",
+              "value": "0xA8",
+              "description": "Set multiplex",
+              "purpose": null
+            },
+            {
+              "reg_addr": "0x00",
+              "value": "0x3F",
+              "description": "Multiplex ratio 64",
+              "purpose": null
+            },
+            {
+              "reg_addr": "0x00",
+              "value": "0x8D",
+              "description": "Charge pump",
+              "purpose": null
+            },
+            {
+              "reg_addr": "0x00",
+              "value": "0x14",
+              "description": "Enable charge pump",
+              "purpose": null
+            }
+          ],
+          "reads": [],
+          "delay_after_ms": null,
+          "precondition": null,
+          "postcondition": null,
+          "provenance": {
+            "source_type": "builtin_db",
+            "source_ref": null,
+            "confidence": 0.95,
+            "evidence": []
+          }
+        },
+        {
+          "phase": "enable",
+          "order": 2,
+          "writes": [
+            {
+              "reg_addr": "0x00",
+              "value": "0xAF",
+              "description": "Display ON",
+              "purpose": null
+            }
+          ],
+          "reads": [],
+          "delay_after_ms": null,
+          "precondition": null,
+          "postcondition": null,
+          "provenance": {
+            "source_type": "builtin_db",
+            "source_ref": null,
+            "confidence": 0.95,
+            "evidence": []
+          }
+        }
+      ],
+      "irq_gpio": null,
+      "irq_trigger": "falling"
+    }
+  ],
+  "power_sequence": {
+    "rails": [
+      {
+        "name": "VIN_5V",
+        "voltage": {
+          "nominal": 5.0,
+          "min": 4.5,
+          "max": 5.5,
+          "unit": "V"
+        },
+        "max_current_ma": null,
+        "enable_gpio": null,
+        "startup_delay_ms": null,
+        "provenance": {
+          "source_type": "inference",
+          "source_ref": null,
+          "confidence": 0.7,
+          "evidence": []
+        }
+      },
+      {
+        "name": "3V3_REG",
+        "voltage": {
+          "nominal": 3.3,
+          "min": 1.8,
+          "max": 3.6,
+          "unit": "V"
+        },
+        "max_current_ma": 800.0,
+        "enable_gpio": null,
+        "startup_delay_ms": null,
+        "provenance": {
+          "source_type": "inference",
+          "source_ref": null,
+          "confidence": 0.7,
+          "evidence": []
+        }
+      }
+    ],
+    "dependencies": [
+      {
+        "source": "VIN_5V",
+        "target": "3V3_REG",
+        "min_delay_ms": 1,
+        "description": "AMS1117-3.3: input rail must stabilise before output",
+        "provenance": {
+          "source_type": "inference",
+          "source_ref": null,
+          "confidence": 0.9,
+          "evidence": []
+        }
+      }
+    ]
+  },
+  "constraints": [],
+  "bom": [
+    {
+      "line_id": "L001",
+      "component_id": "RP2040",
+      "mpn": "RP2040",
+      "manufacturer": "Raspberry Pi Ltd",
+      "description": "RP2040 Dual-Core ARM Cortex-M0+ MCU",
+      "qty": 1.0,
+      "unit_cost_estimate": 1.0,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L002",
+      "component_id": "SSD1306",
+      "mpn": "SSD1306",
+      "manufacturer": "Solomon Systech",
+      "description": "SSD1306 OLED Display Controller",
+      "qty": 1.0,
+      "unit_cost_estimate": 5.0,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L003",
+      "component_id": "LTST_C150GKT",
+      "mpn": "LTST-C150GKT",
+      "manufacturer": "Lite-On",
+      "description": "Green Status LED 0603",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L004",
+      "component_id": "USB_C_CONN",
+      "mpn": "USB-C-CONN",
+      "manufacturer": "Generic",
+      "description": "USB Type-C Receptacle Connector",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.6,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L005",
+      "component_id": "W25Q16JVSSIQ",
+      "mpn": "W25Q16JVSSIQ",
+      "manufacturer": "Winbond",
+      "description": "W25Q16JVSSIQ 16Mbit QSPI NOR Boot Flash",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.3,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L006",
+      "component_id": "BSS138",
+      "mpn": "BSS138",
+      "manufacturer": "ON Semiconductor",
+      "description": "BSS138 N-Channel MOSFET Level Shifter",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "L007",
+      "component_id": "CONN_SWD_2X5",
+      "mpn": "CONN-SWD-2x5",
+      "manufacturer": "Generic",
+      "description": "ARM SWD 2x5 1.27mm Debug Header",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.5,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "builtin_db",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P001",
+      "component_id": "R1",
+      "mpn": "RC0402FR-072K2L",
+      "manufacturer": null,
+      "description": "2.2k\u03a9 resistor \u2014 i2c pullup sda i2c0",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P002",
+      "component_id": "R2",
+      "mpn": "RC0402FR-072K2L",
+      "manufacturer": null,
+      "description": "2.2k\u03a9 resistor \u2014 i2c pullup scl i2c0",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P003",
+      "component_id": "C1",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 decoupling vdd RP2040",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P004",
+      "component_id": "C2",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 decoupling vdd SSD1306",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P005",
+      "component_id": "C3",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 decoupling vdd LTST C150GKT",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P006",
+      "component_id": "C4",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 decoupling vdd USB C CONN",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P007",
+      "component_id": "C5",
+      "mpn": "GRM188R61A106KE69D",
+      "manufacturer": null,
+      "description": "10uF capacitor \u2014 bulk cap VIN 5V",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P008",
+      "component_id": "C6",
+      "mpn": "GRM188R61A106KE69D",
+      "manufacturer": null,
+      "description": "10uF capacitor \u2014 bulk cap 3V3 REG",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P009",
+      "component_id": "C7",
+      "mpn": "GRM188R61A106KE69D",
+      "manufacturer": null,
+      "description": "10uF capacitor \u2014 ldo input cap U LDO1",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P010",
+      "component_id": "C8",
+      "mpn": "GRM188R61A106KE69D",
+      "manufacturer": null,
+      "description": "10uF capacitor \u2014 ldo output bulk U LDO1",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.05,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P011",
+      "component_id": "C9",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 ldo output noise U LDO1",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P012",
+      "component_id": "R3",
+      "mpn": "RC0402FR-07330RL",
+      "manufacturer": null,
+      "description": "330\u03a9 resistor \u2014 led series LTST C150GKT",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P013",
+      "component_id": "BOOT_R1",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 reset pullup RUN",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P014",
+      "component_id": "BOOT_C1",
+      "mpn": "GRM155R71C104KA88D",
+      "manufacturer": null,
+      "description": "100nF capacitor \u2014 reset filter RUN",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P015",
+      "component_id": "BOOT_R2",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 boot pullup QSPI SS",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P016",
+      "component_id": "CLK_Y1",
+      "mpn": "HC49-12MHZ",
+      "manufacturer": null,
+      "description": "12MHz crystal \u2014 main crystal 12mhz",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.25,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P017",
+      "component_id": "CLK_C1",
+      "mpn": "GRM1555C1H120GA01D",
+      "manufacturer": null,
+      "description": "20pF capacitor \u2014 crystal load cap XIN",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P018",
+      "component_id": "CLK_C2",
+      "mpn": "GRM1555C1H120GA01D",
+      "manufacturer": null,
+      "description": "20pF capacitor \u2014 crystal load cap XOUT",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P019",
+      "component_id": "LS_R1",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 levelshift pullup LTST-C150GKT 3.3V",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P020",
+      "component_id": "LS_R2",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 levelshift pullup LTST-C150GKT 2.1V",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P021",
+      "component_id": "LS_R3",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 3.3V",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P022",
+      "component_id": "LS_R4",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 levelshift pullup USB-C-CONN 5.0V",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P023",
+      "component_id": "BP_R1",
+      "mpn": "RC0402FR-0733RL",
+      "manufacturer": null,
+      "description": "33\u03a9 resistor \u2014 spi sck series qspi boot",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P024",
+      "component_id": "BP_R2",
+      "mpn": "RC0402FR-0710KL",
+      "manufacturer": null,
+      "description": "10k\u03a9 resistor \u2014 spi cs pullup W25Q16JVSSIQ",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P025",
+      "component_id": "CC_R1",
+      "mpn": "RC0402FR-075K1L",
+      "manufacturer": null,
+      "description": "5.1k\u03a9 resistor \u2014 usbc cc1 pulldown",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P026",
+      "component_id": "CC_R2",
+      "mpn": "RC0402FR-075K1L",
+      "manufacturer": null,
+      "description": "5.1k\u03a9 resistor \u2014 usbc cc2 pulldown",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.01,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P027",
+      "component_id": "MC_C1",
+      "mpn": "",
+      "manufacturer": null,
+      "description": "10\u00b5FF cap \u2014 mcu mandatory Bulk decoupling for IO supply",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P028",
+      "component_id": "MC_C2",
+      "mpn": "",
+      "manufacturer": null,
+      "description": "1\u00b5FF cap \u2014 mcu mandatory On-chip regulator output decoupling (man",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P029",
+      "component_id": "MC_R1",
+      "mpn": "",
+      "manufacturer": null,
+      "description": "1k\u03a9\u03a9 resistor \u2014 mcu mandatory RP2040 HW Guide: 1k\u03a9 between XIN and GND",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "P030",
+      "component_id": "MC_R2",
+      "mpn": "",
+      "manufacturer": null,
+      "description": "27\u03a9\u03a9 resistor \u2014 mcu mandatory USB D+/D- series resistors (2\u00d7 required)",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.02,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.95,
+        "evidence": []
+      }
+    },
+    {
+      "line_id": "V001",
+      "component_id": "U_LDO1",
+      "mpn": "AMS1117-3.3",
+      "manufacturer": "Advanced Monolithic Systems",
+      "description": "LDO Voltage Regulator VIN_5V\u21923V3_REG (5V\u21923.3V, 800mA max)",
+      "qty": 1.0,
+      "unit_cost_estimate": 0.3,
+      "currency": "USD",
+      "availability": null,
+      "provenance": {
+        "source_type": "inference",
+        "source_ref": null,
+        "confidence": 0.9,
+        "evidence": []
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-03-08T15:48:27.268963+00:00",
+    "track": "B",
+    "confidence": {
+      "overall": 0.725,
+      "subscores": {
+        "intent": 0.79,
+        "components": 0.725,
+        "topology": 0.7,
+        "electrical": 0.855,
+        "driver_quality": 0.908
+      },
+      "explanations": [
+        "1 warning(s) in validation",
+        "1 unknown constraint(s)",
+        "Driver quality score: 0.91",
+        "4 assumption(s) reduce confidence by 0.06"
+      ]
+    },
+    "assumptions": [
+      "Supply 5.0V > MCU VDD_MAX 3.6V \u2014 adding AMS1117-3.3 LDO (800mA capacity, est. load 3054mA) on VIN_5V\u21923V3_REG",
+      "Thermal warning: AMS1117-3.3 fallback dissipates 5.2W (5V\u21923.3V @ 3054mA) \u2014 consider a switching regulator",
+      "Phase 22.5: VOLTAGE MISMATCH \u2014 LTST-C150GKT (2.1V) with MCU (3.3V). BSS138 level-shifter + 2\u00d7 10k pull-ups added.",
+      "Phase 22.5: VOLTAGE MISMATCH \u2014 USB-C-CONN (5.0V) with MCU (3.3V). BSS138 level-shifter + 2\u00d7 10k pull-ups added.",
+      "Phase 22.3: Reset pull-up 10k\u03a9 on RUN (from MCU profile)",
+      "Phase 22.3: Boot pin QSPI_SS \u2192 10k pull_up_10k for high normal boot",
+      "Phase 22.3b: W25Q16JVSSIQ QSPI boot flash added \u2014 RP2040 requires external flash for XIP boot",
+      "Phase 22.4: Crystal 12MHz + 2\u00d7 20pF load caps (C_load=15pF, C_stray=5pF) from MCU profile",
+      "I2C pattern (i2c0): profile-recommended pull-up 2.2k (instead of default 4.7k\u03a9)",
+      "SPI pattern (qspi_boot): SCK series resistor + 1 CS pull-up(s)",
+      "MCU profile: 7 mandatory components applied from RP2040 Device Profile",
+      "Debug interface: SWD (SWCLK=SWCLK, SWDIO=SWDIO)",
+      "Debug connector: ARM SWD 3-pin (PinHeader_1x03_P2.54mm)",
+      "Boot-strap pins (avoid for general I/O): QSPI_SS"
+    ],
+    "session_id": "bdd9c08e-d0fa-44e2-bbf4-4cc07401d127",
+    "profile_checks": {
+      "errors": 0,
+      "warnings": 0,
+      "checks": [
+        {
+          "id": "profile.power_domains",
+          "severity": "info",
+          "status": "pass",
+          "message": "Power domains: IOVDD, DVDD, USB_VDD, ADC_AVDD"
+        },
+        {
+          "id": "profile.decoupling_rules",
+          "severity": "info",
+          "status": "pass",
+          "message": "All power domains have decoupling rules"
+        },
+        {
+          "id": "profile.clock_config",
+          "severity": "info",
+          "status": "pass",
+          "message": "Clock: external_xtal 12MHz, safe default 12MHz"
+        },
+        {
+          "id": "profile.driver_exists.SSD1306",
+          "severity": "info",
+          "status": "pass",
+          "message": "SSD1306: driver 'U8g2 \u2014 Universal Graphics Library' available (quality=0.91, license=BSD-2-Clause)"
+        }
+      ]
+    }
+  }
+}

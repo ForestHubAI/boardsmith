@@ -1,0 +1,240 @@
+[
+  {
+    "line_id": "L001",
+    "component_id": "STM32F405RGT6",
+    "mpn": "STM32F405RGT6",
+    "manufacturer": "STMicroelectronics",
+    "description": "STM32F405 Cortex-M4 MCU",
+    "qty": 1.0,
+    "unit_cost_estimate": 8.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L002",
+    "component_id": "TB6612FNG",
+    "mpn": "TB6612FNG",
+    "manufacturer": "Toshiba",
+    "description": "TB6612FNG Dual DC Motor Driver",
+    "qty": 1.0,
+    "unit_cost_estimate": 2.8,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L003",
+    "component_id": "CONN_SWD_2X5",
+    "mpn": "CONN-SWD-2x5",
+    "manufacturer": "Generic",
+    "description": "ARM SWD 2x5 1.27mm Debug Header",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P001",
+    "component_id": "C1",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd STM32F405RGT6",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P002",
+    "component_id": "C2",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd TB6612FNG",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P003",
+    "component_id": "C3",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap VIN 12V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P004",
+    "component_id": "C4",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap 3V3 REG",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P005",
+    "component_id": "C5",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo input cap U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P006",
+    "component_id": "C6",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo output bulk U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P007",
+    "component_id": "C7",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 ldo output noise U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P008",
+    "component_id": "CLK_Y1",
+    "mpn": "HC49-8MHZ",
+    "manufacturer": null,
+    "description": "8MHz crystal \u2014 main crystal 8mhz",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.25,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P009",
+    "component_id": "CLK_C1",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "30pF capacitor \u2014 crystal load cap OSC IN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P010",
+    "component_id": "CLK_C2",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "30pF capacitor \u2014 crystal load cap OSC OUT",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "V001",
+    "component_id": "U_LDO1",
+    "mpn": "AMS1117-3.3",
+    "manufacturer": "Advanced Monolithic Systems",
+    "description": "LDO Voltage Regulator VIN_12V\u21923V3_REG (12V\u21923.3V, 800mA max)",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.9,
+      "evidence": []
+    }
+  }
+]

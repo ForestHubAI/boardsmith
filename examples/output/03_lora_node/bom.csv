@@ -1,0 +1,18 @@
+Qty,MPN,Description,Manufacturer,UnitCost_USD,ComponentID
+1.0,ESP32-WROOM-32,ESP32 Wi-Fi+BT Module,Espressif,3.5,ESP32_WROOM_32
+1.0,BME280,BME280 Pressure/Humidity/Temperature Sensor,Bosch Sensortec,3.8,BME280
+1.0,SX1276,SX1276 LoRa/FSK Transceiver,Semtech,8.0,SX1276
+1.0,CONN-ANT-UFL,U.FL RF Antenna Connector (50Ω),Hirose,0.25,CONN_ANT_UFL
+1.0,RC0402FR-074K7L,3.3kΩ resistor — i2c pullup sda i2c0,,0.01,R1
+1.0,RC0402FR-074K7L,3.3kΩ resistor — i2c pullup scl i2c0,,0.01,R2
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd ESP32 WROOM 32,,0.02,C1
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd BME280,,0.02,C2
+1.0,GRM155R71C104KA88D,100nF capacitor — decoupling vdd SX1276,,0.02,C3
+1.0,GRM188R61A106KE69D,10uF capacitor — bulk cap VIN 3V,,0.05,C4
+1.0,GRM188R61A106KE69D,10uF capacitor — bulk cap 3V3 REG,,0.05,C5
+1.0,GRM188R61A106KE69D,10uF capacitor — ldo input cap U LDO1,,0.05,C6
+1.0,GRM188R61A106KE69D,10uF capacitor — ldo output bulk U LDO1,,0.05,C7
+1.0,GRM155R71C104KA88D,100nF capacitor — ldo output noise U LDO1,,0.02,C8
+1.0,RC0402FR-0733RL,33Ω resistor — spi sck series spi0,,0.01,BP_R1
+1.0,RC0402FR-0710KL,10kΩ resistor — spi cs pullup SX1276,,0.01,BP_R2
+1.0,AP2112K-3.3TRG1,"LDO Voltage Regulator VIN_3V→3V3_REG (4V→3.3V, 600mA max)",Diodes Inc,0.25,U_LDO1

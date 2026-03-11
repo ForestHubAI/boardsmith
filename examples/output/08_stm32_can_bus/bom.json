@@ -1,0 +1,512 @@
+[
+  {
+    "line_id": "L001",
+    "component_id": "STM32F405RGT6",
+    "mpn": "STM32F405RGT6",
+    "manufacturer": "STMicroelectronics",
+    "description": "STM32F405 Cortex-M4 MCU",
+    "qty": 1.0,
+    "unit_cost_estimate": 8.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L002",
+    "component_id": "LTST_C150GKT",
+    "mpn": "LTST-C150GKT",
+    "manufacturer": "Lite-On",
+    "description": "Green Status LED 0603",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L003",
+    "component_id": "CONN_UART_4PIN",
+    "mpn": "CONN-UART-4PIN",
+    "manufacturer": "Generic",
+    "description": "UART Header Connector 4-Pin 2.54mm",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.1,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L004",
+    "component_id": "CONN_CAN_2PIN",
+    "mpn": "CONN-CAN-2PIN",
+    "manufacturer": "Generic",
+    "description": "CAN Bus Screw Terminal 2-Pin",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L005",
+    "component_id": "CONN_RS485_2PIN",
+    "mpn": "CONN-RS485-2PIN",
+    "manufacturer": "Generic",
+    "description": "RS485 Bus Screw Terminal 2-Pin",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.3,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L006",
+    "component_id": "BSS138",
+    "mpn": "BSS138",
+    "manufacturer": "ON Semiconductor",
+    "description": "BSS138 N-Channel MOSFET Level Shifter",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "L007",
+    "component_id": "CONN_SWD_2X5",
+    "mpn": "CONN-SWD-2x5",
+    "manufacturer": "Generic",
+    "description": "ARM SWD 2x5 1.27mm Debug Header",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.5,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "builtin_db",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P001",
+    "component_id": "C1",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd STM32F405RGT6",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P002",
+    "component_id": "C2",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd LTST C150GKT",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P003",
+    "component_id": "C3",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd CONN UART 4PIN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P004",
+    "component_id": "C4",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd CONN CAN 2PIN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P005",
+    "component_id": "C5",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 decoupling vdd CONN RS485 2PIN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P006",
+    "component_id": "C6",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap VIN 24V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P007",
+    "component_id": "C7",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 bulk cap 3V3 REG",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P008",
+    "component_id": "C8",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo input cap U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P009",
+    "component_id": "C9",
+    "mpn": "GRM188R61A106KE69D",
+    "manufacturer": null,
+    "description": "10uF capacitor \u2014 ldo output bulk U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.05,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P010",
+    "component_id": "C10",
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": null,
+    "description": "100nF capacitor \u2014 ldo output noise U LDO1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P011",
+    "component_id": "R1",
+    "mpn": "RC0402FR-07330RL",
+    "manufacturer": null,
+    "description": "330\u03a9 resistor \u2014 led series LTST C150GKT",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P012",
+    "component_id": "R2",
+    "mpn": "RC0402FR-07120RL",
+    "manufacturer": null,
+    "description": "120\u03a9 resistor \u2014 rs485 term CONN RS485 2PIN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P013",
+    "component_id": "CLK_Y1",
+    "mpn": "HC49-8MHZ",
+    "manufacturer": null,
+    "description": "8MHz crystal \u2014 main crystal 8mhz",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.25,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P014",
+    "component_id": "CLK_C1",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "30pF capacitor \u2014 crystal load cap OSC IN",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P015",
+    "component_id": "CLK_C2",
+    "mpn": "GRM1555C1H120GA01D",
+    "manufacturer": null,
+    "description": "30pF capacitor \u2014 crystal load cap OSC OUT",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.02,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P016",
+    "component_id": "LS_R1",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup LTST-C150GKT 3.3V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P017",
+    "component_id": "LS_R2",
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": null,
+    "description": "10k\u03a9 resistor \u2014 levelshift pullup LTST-C150GKT 2.1V",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P018",
+    "component_id": "BP_R1",
+    "mpn": "RC0402FR-07470RL",
+    "manufacturer": null,
+    "description": "470\u03a9 resistor \u2014 uart tx series uart0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P019",
+    "component_id": "BP_R2",
+    "mpn": "RC0402FR-07470RL",
+    "manufacturer": null,
+    "description": "470\u03a9 resistor \u2014 uart rx series uart0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P020",
+    "component_id": "BP_R3",
+    "mpn": "RC0402FR-07470RL",
+    "manufacturer": null,
+    "description": "470\u03a9 resistor \u2014 uart tx series uart1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P021",
+    "component_id": "BP_R4",
+    "mpn": "RC0402FR-07470RL",
+    "manufacturer": null,
+    "description": "470\u03a9 resistor \u2014 uart rx series uart1",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "P022",
+    "component_id": "BP_R5",
+    "mpn": "RC0402FR-07120RL",
+    "manufacturer": null,
+    "description": "120\u03a9 resistor \u2014 can termination can0",
+    "qty": 1.0,
+    "unit_cost_estimate": 0.01,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.95,
+      "evidence": []
+    }
+  },
+  {
+    "line_id": "V001",
+    "component_id": "U_LDO1",
+    "mpn": "LM2940CT-3.3",
+    "manufacturer": "Texas Instruments",
+    "description": "LDO Voltage Regulator VIN_24V\u21923V3_REG (24V\u21923.3V, 1000mA max)",
+    "qty": 1.0,
+    "unit_cost_estimate": 1.2,
+    "currency": "USD",
+    "availability": null,
+    "provenance": {
+      "source_type": "inference",
+      "source_ref": null,
+      "confidence": 0.9,
+      "evidence": []
+    }
+  }
+]

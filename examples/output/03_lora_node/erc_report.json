@@ -1,0 +1,11 @@
+{
+  "check_type": "erc",
+  "passed": true,
+  "iterations": 1,
+  "initial_errors": 0,
+  "final_errors": 0,
+  "fixes_applied": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "violations": []
+}

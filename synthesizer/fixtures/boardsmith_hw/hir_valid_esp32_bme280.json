@@ -1,0 +1,187 @@
+{
+  "version": "1.1.0",
+  "source": "prompt",
+  "components": [
+    {
+      "id": "ESP32_WROOM_32",
+      "name": "ESP32 Wi-Fi+BT Module",
+      "role": "mcu",
+      "manufacturer": "Espressif",
+      "mpn": "ESP32-WROOM-32",
+      "package": "SMD module",
+      "interface_types": ["I2C", "SPI", "UART", "GPIO", "ADC", "PWM"],
+      "pins": [],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "id": "BME280",
+      "name": "BME280 Pressure/Humidity/Temperature Sensor",
+      "role": "sensor",
+      "manufacturer": "Bosch Sensortec",
+      "mpn": "BME280",
+      "package": "LGA-8",
+      "interface_types": ["I2C", "SPI"],
+      "pins": [],
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "nets": [
+    {
+      "name": "i2c0_SDA",
+      "pins": [
+        { "component_id": "ESP32_WROOM_32", "pin_name": "21" },
+        { "component_id": "BME280", "pin_name": "SDA" }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": { "source_type": "inference", "confidence": 0.7, "evidence": [] }
+    },
+    {
+      "name": "i2c0_SCL",
+      "pins": [
+        { "component_id": "ESP32_WROOM_32", "pin_name": "22" },
+        { "component_id": "BME280", "pin_name": "SCL" }
+      ],
+      "is_bus": true,
+      "is_power": false,
+      "provenance": { "source_type": "inference", "confidence": 0.7, "evidence": [] }
+    }
+  ],
+  "buses": [
+    {
+      "name": "i2c0",
+      "type": "I2C",
+      "master_component_id": "ESP32_WROOM_32",
+      "slave_component_ids": ["BME280"],
+      "pin_mapping": []
+    }
+  ],
+  "bus_contracts": [
+    {
+      "bus_name": "i2c0",
+      "bus_type": "I2C",
+      "master_id": "ESP32_WROOM_32",
+      "slave_ids": ["BME280"],
+      "configured_clock_hz": 400000,
+      "pin_assignments": { "SDA": "21", "SCL": "22" },
+      "slave_addresses": { "BME280": "0x76" },
+      "i2c": {
+        "max_clock_hz": 400000,
+        "address_bits": 7
+      },
+      "provenance": { "source_type": "inference", "confidence": 0.7, "evidence": [] }
+    }
+  ],
+  "electrical_specs": [
+    {
+      "component_id": "ESP32_WROOM_32",
+      "supply_voltage": { "nominal": 3.3, "min": 3.0, "max": 3.6 },
+      "io_voltage": { "nominal": 3.3, "min": 3.0, "max": 3.6 },
+      "logic_high_min": 2.475,
+      "logic_low_max": 0.825,
+      "current_draw": { "typical": 80.0, "max": 500.0, "unit": "mA" },
+      "is_5v_tolerant": false,
+      "drive_strength_ma": 40.0,
+      "abs_max_voltage": 3.6,
+      "temp_min_c": -40.0,
+      "temp_max_c": 85.0,
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "component_id": "BME280",
+      "supply_voltage": { "nominal": 2.655, "min": 1.71, "max": 3.6 },
+      "io_voltage": { "nominal": 3.3, "min": 1.2, "max": 3.6 },
+      "current_draw": { "typical": 0.34, "max": 1.0, "unit": "mA" },
+      "is_5v_tolerant": false,
+      "abs_max_voltage": 4.25,
+      "temp_min_c": -40.0,
+      "temp_max_c": 85.0,
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "init_contracts": [
+    {
+      "component_id": "BME280",
+      "component_name": "BME280 Pressure/Humidity/Temperature Sensor",
+      "phases": [
+        {
+          "phase": "reset",
+          "order": 0,
+          "writes": [{ "reg_addr": "0xE0", "value": "0xB6", "description": "Soft reset" }],
+          "reads": [],
+          "delay_after_ms": 2,
+          "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+        },
+        {
+          "phase": "verify",
+          "order": 1,
+          "writes": [],
+          "reads": [{ "reg_addr": "0xD0", "expected_value": "0x60", "description": "Read chip_id, expect 0x60" }],
+          "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+        },
+        {
+          "phase": "configure",
+          "order": 2,
+          "writes": [
+            { "reg_addr": "0xF2", "value": "0x01", "description": "ctrl_hum: oversampling x1" },
+            { "reg_addr": "0xF4", "value": "0x27", "description": "ctrl_meas: temp x1, press x1, normal mode" },
+            { "reg_addr": "0xF5", "value": "0xA0", "description": "config: t_standby 1000ms, filter off" }
+          ],
+          "reads": [],
+          "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+        }
+      ]
+    }
+  ],
+  "power_sequence": {
+    "rails": [
+      {
+        "name": "3V3",
+        "voltage": { "nominal": 3.3, "min": 3.0, "max": 3.6 },
+        "provenance": { "source_type": "inference", "confidence": 0.7, "evidence": [] }
+      }
+    ],
+    "dependencies": []
+  },
+  "constraints": [],
+  "bom": [
+    {
+      "line_id": "L001",
+      "component_id": "ESP32_WROOM_32",
+      "mpn": "ESP32-WROOM-32",
+      "manufacturer": "Espressif",
+      "description": "ESP32 Wi-Fi+BT Module",
+      "qty": 1,
+      "unit_cost_estimate": 3.50,
+      "currency": "USD",
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    },
+    {
+      "line_id": "L002",
+      "component_id": "BME280",
+      "mpn": "BME280",
+      "manufacturer": "Bosch Sensortec",
+      "description": "BME280 Pressure/Humidity/Temperature Sensor",
+      "qty": 1,
+      "unit_cost_estimate": 3.80,
+      "currency": "USD",
+      "provenance": { "source_type": "builtin_db", "confidence": 0.95, "evidence": [] }
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-18T00:00:00+00:00",
+    "track": "B",
+    "confidence": {
+      "overall": 0.88,
+      "subscores": {
+        "intent": 0.9,
+        "components": 0.92,
+        "topology": 0.85,
+        "electrical": 1.0
+      },
+      "explanations": ["Boardsmith synthesis with 2 components"]
+    },
+    "assumptions": [],
+    "session_id": "fixture-test-001"
+  }
+}

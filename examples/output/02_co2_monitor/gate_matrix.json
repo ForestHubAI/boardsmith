@@ -1,0 +1,16 @@
+{
+  "release_ready": false,
+  "erc_clean": false,
+  "drc_clean": true,
+  "boot_pins_valid": true,
+  "power_budget_ok": false,
+  "mandatory_components": true,
+  "no_pinmux_conflicts": true,
+  "bom_complete": true,
+  "firmware_compiles": true,
+  "level_shifter_inserted": false,
+  "warnings": [
+    "ERC: 5 error(s) in erc_report.json",
+    "No power rails defined in HIR"
+  ]
+}

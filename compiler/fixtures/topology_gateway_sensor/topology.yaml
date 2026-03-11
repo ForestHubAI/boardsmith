@@ -1,0 +1,45 @@
+boardsmith_fw_topology: "1.0"
+system_name: "Sensor Gateway Network"
+
+nodes:
+  - id: gateway
+    name: "Main Gateway"
+    mcu: ESP32-WROOM-32
+    family: esp32
+    role: gateway
+
+  - id: sensor_1
+    name: "Temperature Node"
+    mcu: ESP32-C3
+    family: esp32
+    role: sensor
+
+  - id: actuator_1
+    name: "Relay Controller"
+    mcu: STM32F411
+    family: stm32
+    role: actuator
+
+messages:
+  - name: sensor_data
+    fields:
+      - { name: temperature, type: float }
+      - { name: humidity, type: float }
+      - { name: node_id, type: uint8 }
+
+  - name: actuator_cmd
+    fields:
+      - { name: relay_id, type: uint8 }
+      - { name: state, type: bool }
+
+links:
+  - source: sensor_1
+    target: gateway
+    protocol: esp_now
+    messages: [sensor_data]
+
+  - source: gateway
+    target: actuator_1
+    protocol: uart
+    baud_rate: 9600
+    messages: [actuator_cmd]

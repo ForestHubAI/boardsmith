@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" fill="none">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Terminal window -->
+  <g filter="url(#shadow)">
+    <!-- Window background -->
+    <rect x="20" y="20" width="780" height="500" rx="12" fill="#1E1E2E"/>
+
+    <!-- Title bar -->
+    <rect x="20" y="20" width="780" height="40" rx="12" fill="#2A2A3E"/>
+    <rect x="20" y="48" width="780" height="12" fill="#2A2A3E"/>
+
+    <!-- Window buttons -->
+    <circle cx="52" cy="40" r="7" fill="#FF5F57"/>
+    <circle cx="76" cy="40" r="7" fill="#FFBD2E"/>
+    <circle cx="100" cy="40" r="7" fill="#27C93F"/>
+
+    <!-- Title -->
+    <text x="410" y="45" font-family="'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="13" fill="#888899" text-anchor="middle">Terminal</text>
+  </g>
+
+  <!-- Terminal content -->
+  <g font-family="'Menlo', 'Courier New', Courier, monospace">
+
+    <!-- Install command -->
+    <text x="50" y="90" font-size="14">
+      <tspan fill="#6C7086">~ </tspan>
+      <tspan fill="#27C93F">$ </tspan>
+      <tspan fill="#CDD6F4">pip install boardsmith</tspan>
+    </text>
+
+    <!-- ASCII Art Banner -->
+    <g fill="#FF3D00" font-size="12">
+      <text x="74" y="130" xml:space="preserve"> ____                      _               _ _   _     </text>
+      <text x="74" y="146" xml:space="preserve">| __ )  ___   __ _ _ __ __| |___ _ __ ___ (_) |_| |__  </text>
+      <text x="74" y="162" xml:space="preserve">|  _ \ / _ \ / _` | '__/ _` / __| '_ ` _ \| | __| '_ \ </text>
+      <text x="74" y="178" xml:space="preserve">| |_) | (_) | (_| | | | (_| \__ \ | | | | | | |_| | | |</text>
+      <text x="74" y="194" xml:space="preserve">|____/ \___/ \__,_|_|  \__,_|___/_| |_| |_|_|\__|_| |_|</text>
+    </g>
+
+    <!-- Version + description -->
+    <text x="74" y="224" font-size="13">
+      <tspan fill="#CDD6F4">boardsmith </tspan>
+      <tspan fill="#A6E3A1">v0.1.0</tspan>
+    </text>
+    <text x="74" y="244" font-size="13" fill="#6C7086">Text prompt &#x2192; KiCad schematic, BOM, and firmware.</text>
+
+    <!-- Installed lines -->
+    <text x="74" y="280" font-size="13">
+      <tspan fill="#27C93F">&#x2714; </tspan>
+      <tspan fill="#CDD6F4">Installed boardsmith CLI</tspan>
+    </text>
+    <text x="74" y="304" font-size="13">
+      <tspan fill="#27C93F">&#x2714; </tspan>
+      <tspan fill="#CDD6F4">Loaded 83 verified components</tspan>
+    </text>
+    <text x="74" y="328" font-size="13">
+      <tspan fill="#27C93F">&#x2714; </tspan>
+      <tspan fill="#CDD6F4">Targets: ESP32, RP2040, STM32</tspan>
+    </text>
+
+    <!-- Done line -->
+    <text x="74" y="368" font-size="13">
+      <tspan fill="#A6E3A1">Done!</tspan>
+      <tspan fill="#CDD6F4"> Run </tspan>
+      <tspan fill="#CDD6F4">boardsmith build -p </tspan>
+      <tspan fill="#A6E3A1">"your idea"</tspan>
+      <tspan fill="#CDD6F4"> to get started.</tspan>
+    </text>
+
+    <!-- Prompt -->
+    <text x="50" y="418" font-size="14">
+      <tspan fill="#6C7086">~ </tspan>
+      <tspan fill="#27C93F">$ </tspan>
+      <tspan fill="#CDD6F4">&#x2588;</tspan>
+    </text>
+
+  </g>
+</svg>

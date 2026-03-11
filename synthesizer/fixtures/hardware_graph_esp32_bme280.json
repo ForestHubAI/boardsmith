@@ -1,0 +1,86 @@
+{
+  "source_file": "esp32_bme280_example.sch",
+  "components": [
+    {
+      "id": "U1",
+      "name": "ESP32-WROOM-32",
+      "mpn": "ESP32-WROOM-32",
+      "role": "mcu",
+      "manufacturer": "Espressif",
+      "package": "SMD module",
+      "interface_types": ["I2C", "SPI", "UART", "GPIO"],
+      "pins": [
+        { "name": "GPIO21", "number": "21", "function": "I2C_SDA", "electrical_type": "bidir" },
+        { "name": "GPIO22", "number": "22", "function": "I2C_SCL", "electrical_type": "bidir" },
+        { "name": "3V3",    "number": "2",  "function": "PWR",     "electrical_type": "power_in" },
+        { "name": "GND",    "number": "1",  "function": "GND",     "electrical_type": "power_in" }
+      ],
+      "properties": {}
+    },
+    {
+      "id": "U2",
+      "name": "BME280",
+      "mpn": "BME280",
+      "role": "sensor",
+      "manufacturer": "Bosch Sensortec",
+      "package": "LGA-8",
+      "interface_types": ["I2C", "SPI"],
+      "pins": [
+        { "name": "SDI",  "number": "4", "function": "I2C_SDA", "electrical_type": "bidir" },
+        { "name": "SCK",  "number": "5", "function": "I2C_SCL", "electrical_type": "input" },
+        { "name": "VDD",  "number": "2", "function": "PWR",     "electrical_type": "power_in" },
+        { "name": "GND",  "number": "1", "function": "GND",     "electrical_type": "power_in" },
+        { "name": "SDO",  "number": "6", "function": "ADDR_SEL","electrical_type": "input" }
+      ],
+      "properties": { "i2c_address": "0x76" }
+    }
+  ],
+  "nets": [
+    {
+      "name": "I2C_SDA",
+      "pins": [
+        { "component_id": "U1", "pin_name": "GPIO21" },
+        { "component_id": "U2", "pin_name": "SDI" }
+      ],
+      "is_bus": true,
+      "is_power": false
+    },
+    {
+      "name": "I2C_SCL",
+      "pins": [
+        { "component_id": "U1", "pin_name": "GPIO22" },
+        { "component_id": "U2", "pin_name": "SCK" }
+      ],
+      "is_bus": true,
+      "is_power": false
+    },
+    {
+      "name": "+3V3",
+      "pins": [
+        { "component_id": "U1", "pin_name": "3V3" },
+        { "component_id": "U2", "pin_name": "VDD" }
+      ],
+      "is_bus": false,
+      "is_power": true
+    },
+    {
+      "name": "GND",
+      "pins": [
+        { "component_id": "U1", "pin_name": "GND" },
+        { "component_id": "U2", "pin_name": "GND" }
+      ],
+      "is_bus": false,
+      "is_power": true
+    }
+  ],
+  "buses": [
+    {
+      "name": "I2C0",
+      "type": "I2C",
+      "master_id": "U1",
+      "slave_ids": ["U2"],
+      "net_names": ["I2C_SDA", "I2C_SCL"],
+      "pin_assignments": { "SDA": "21", "SCL": "22" }
+    }
+  ]
+}

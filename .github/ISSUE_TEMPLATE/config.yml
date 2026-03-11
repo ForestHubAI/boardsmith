@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Component Request
+    url: https://github.com/ForestHubAI/boardsmith/issues/new?template=component_request.md
+    about: Request a new component be added to the knowledge base

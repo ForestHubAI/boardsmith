@@ -1,0 +1,93 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+"""SSD1306 OLED Display — Device Software Profile."""
+from shared.knowledge.software_profile_schema import (
+    DeviceSoftwareProfile,
+    DriverFootprint,
+    DriverOption,
+    DriverQualityScore,
+    IntegrationType,
+    LicenseCompatibility,
+    MaintenanceStatus,
+    SourceType,
+)
+
+PROFILE = DeviceSoftwareProfile(
+    component_mpn="SSD1306",
+    protocol="I2C",
+    default_driver_key="u8g2",
+    api_contract_id="display_oled_v1",
+    driver_options=[
+        DriverOption(
+            name="U8g2 — Universal Graphics Library",
+            key="u8g2",
+            source_type=SourceType.git,
+            source_url="https://github.com/olikraus/u8g2",
+            license="BSD-2-Clause",
+            license_compatibility=LicenseCompatibility.compatible,
+            maturity="high",
+            ecosystem=["baremetal", "Arduino", "ESP-IDF", "Pico-SDK"],
+            supported_targets=["esp32", "stm32", "rp2040", "nrf52"],
+            integration_type=IntegrationType.source_embed,
+            last_checked_version="v2.35.19",
+            last_checked_date="2026-01-15",
+            maintenance_status=MaintenanceStatus.active,
+            footprint=DriverFootprint(flash_bytes=32000, ram_bytes=1024),
+            quality_score=DriverQualityScore(
+                test_pass_rate=0.90,
+                maintenance_factor=0.85,
+                ecosystem_support=0.90,
+                community_adoption=0.95,
+                license_score=1.0,
+            ),
+        ),
+        DriverOption(
+            name="Adafruit SSD1306 Library",
+            key="adafruit",
+            source_type=SourceType.git,
+            source_url="https://github.com/adafruit/Adafruit_SSD1306",
+            license="BSD-2-Clause",
+            license_compatibility=LicenseCompatibility.compatible,
+            maturity="high",
+            ecosystem=["Arduino"],
+            supported_targets=["esp32", "rp2040"],
+            integration_type=IntegrationType.package_manager,
+            last_checked_version="v2.5.10",
+            last_checked_date="2026-01-15",
+            maintenance_status=MaintenanceStatus.active,
+            known_issues=["Arduino-only, requires Adafruit_GFX"],
+            footprint=DriverFootprint(flash_bytes=25000, ram_bytes=1024),
+            quality_score=DriverQualityScore(
+                test_pass_rate=0.85,
+                maintenance_factor=0.85,
+                ecosystem_support=0.40,
+                community_adoption=0.90,
+                license_score=1.0,
+            ),
+        ),
+        DriverOption(
+            name="Zephyr In-Tree Display Driver",
+            key="zephyr_intree",
+            source_type=SourceType.package_registry,
+            source_url="zephyr://drivers/display/ssd1306",
+            license="Apache-2.0",
+            license_compatibility=LicenseCompatibility.compatible,
+            maturity="high",
+            ecosystem=["Zephyr"],
+            supported_targets=["nrf52", "stm32"],
+            integration_type=IntegrationType.package_manager,
+            last_checked_version="v3.6.0",
+            last_checked_date="2026-01-15",
+            maintenance_status=MaintenanceStatus.active,
+            quality_score=DriverQualityScore(
+                test_pass_rate=0.90,
+                maintenance_factor=0.95,
+                ecosystem_support=0.40,
+                community_adoption=0.70,
+                license_score=1.0,
+            ),
+        ),
+    ],
+)
+
+from shared.knowledge.software_profiles import register
+register(PROFILE)

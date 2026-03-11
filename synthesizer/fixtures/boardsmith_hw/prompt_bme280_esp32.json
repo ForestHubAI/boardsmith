@@ -1,0 +1,9 @@
+{
+  "prompt": "I need an ESP32 board that reads temperature, humidity, and pressure from a BME280 sensor over I2C",
+  "expected_requirements": {
+    "sensing_modalities": ["temperature", "humidity", "pressure"],
+    "required_interfaces": ["I2C"],
+    "mcu_family": "esp32",
+    "supply_voltage": 3.3
+  }
+}

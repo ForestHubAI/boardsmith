@@ -1,0 +1,133 @@
+{
+  "tool": "boardsmith-fw",
+  "version": "0.6.0",
+  "hir_version": "1.1.0",
+  "valid": true,
+  "summary": {
+    "total": 8,
+    "errors": 0,
+    "warnings": 3,
+    "info": 5,
+    "unknown": 3
+  },
+  "diagnostics": [
+    {
+      "id": "schema.validation.ok",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "HIR JSON schema validation passed",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.STM32F405RGT6.CONN_UART_4PIN.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'STM32F405RGT6' \u2192 'CONN_UART_4PIN'",
+      "affected_components": [
+        "STM32F405RGT6",
+        "CONN_UART_4PIN"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.STM32F405RGT6.CONN_RS485_2PIN.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'STM32F405RGT6' \u2192 'CONN_RS485_2PIN'",
+      "affected_components": [
+        "STM32F405RGT6",
+        "CONN_RS485_2PIN"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "voltage.level.STM32F405RGT6.CONN_CAN_2PIN.ok",
+      "category": "electrical",
+      "severity": "info",
+      "status": "pass",
+      "message": "Voltage levels compatible: 'STM32F405RGT6' \u2192 'CONN_CAN_2PIN'",
+      "affected_components": [
+        "STM32F405RGT6",
+        "CONN_CAN_2PIN"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.CONN_UART_4PIN.missing",
+      "category": "knowledge",
+      "severity": "warning",
+      "status": "unknown",
+      "message": "No init_contract found for peripheral 'CONN_UART_4PIN'",
+      "affected_components": [
+        "CONN_UART_4PIN"
+      ],
+      "suggested_fixes": [
+        "Add init_contract for this component in the HIR or knowledge DB"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.CONN_RS485_2PIN.missing",
+      "category": "knowledge",
+      "severity": "warning",
+      "status": "unknown",
+      "message": "No init_contract found for peripheral 'CONN_RS485_2PIN'",
+      "affected_components": [
+        "CONN_RS485_2PIN"
+      ],
+      "suggested_fixes": [
+        "Add init_contract for this component in the HIR or knowledge DB"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "knowledge.init.CONN_CAN_2PIN.missing",
+      "category": "knowledge",
+      "severity": "warning",
+      "status": "unknown",
+      "message": "No init_contract found for peripheral 'CONN_CAN_2PIN'",
+      "affected_components": [
+        "CONN_CAN_2PIN"
+      ],
+      "suggested_fixes": [
+        "Add init_contract for this component in the HIR or knowledge DB"
+      ],
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "bom.complete",
+      "category": "topology",
+      "severity": "info",
+      "status": "pass",
+      "message": "BOM covers all active components",
+      "provenance": {
+        "source_type": "inference",
+        "confidence": 1.0
+      }
+    }
+  ]
+}

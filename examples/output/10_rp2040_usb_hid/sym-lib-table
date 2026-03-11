@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "boardsmith")(type "KiCad")(uri "${KIPRJMOD}/boardsmith.kicad_sym")(options "")(descr "Project symbols"))
+)
